@@ -89,6 +89,36 @@ class S {
       args: [],
     );
   }
+
+  /// `hopeful`
+  String get hopeful {
+    return Intl.message(
+      'hopeful',
+      name: 'hopeful',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `calm`
+  String get calm {
+    return Intl.message(
+      'calm',
+      name: 'calm',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `follow up`
+  String get follow {
+    return Intl.message(
+      'follow up',
+      name: 'follow',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {
