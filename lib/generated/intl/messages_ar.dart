@@ -23,6 +23,7 @@ class MessageLookup extends MessageLookupByLibrary {
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
         "calm": MessageLookupByLibrary.simpleMessage("هدوء"),
+        "confirm": MessageLookupByLibrary.simpleMessage("تأكيد"),
         "follow": MessageLookupByLibrary.simpleMessage("متابعة"),
         "hope": MessageLookupByLibrary.simpleMessage("هدوء و أمل"),
         "hope_box": MessageLookupByLibrary.simpleMessage("صندوق الأمل"),

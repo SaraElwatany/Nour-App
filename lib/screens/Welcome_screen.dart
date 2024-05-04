@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:nour_app/generated/l10n.dart';
 import 'package:nour_app/widgets/localization_icon.dart';
 import 'package:nour_app/screens/hopeful_and_calm.dart';
+import 'package:nour_app/screens/login_screen.dart';
 
 class Welcome extends StatefulWidget {
   const Welcome({Key? key}) : super(key: key);
@@ -62,7 +63,11 @@ class _WelcomeState extends State<Welcome> {
                     const SizedBox(height: 10),
                     ElevatedButton(
                       onPressed: () {
-                        // Add onPressed functionality
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => LoginScreen()),
+                        );
                       },
                       style: ElevatedButton.styleFrom(
                         shape: RoundedRectangleBorder(
