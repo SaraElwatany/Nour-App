@@ -1,7 +1,7 @@
 import 'dart:async';
 
 import 'package:flutter/material.dart';
-import 'package:nour_app/screens/hope_box.dart';
+import 'package:nour_app/screens/Welcome_screen.dart';
 
 class SplashScreen extends StatefulWidget {
   const SplashScreen({super.key});
@@ -18,8 +18,8 @@ class _SplashScreenState extends State<SplashScreen> {
     super.initState();
     Timer(
         const Duration(seconds: 3),
-        () => Navigator.pushReplacement(context,
-            MaterialPageRoute(builder: (context) => const HopeBox())));
+        () => Navigator.pushReplacement(
+            context, MaterialPageRoute(builder: (context) => const Welcome())));
   }
 
   @override
@@ -28,16 +28,14 @@ class _SplashScreenState extends State<SplashScreen> {
         child: Container(
             width: double.infinity,
             decoration: BoxDecoration(
-              gradient: LinearGradient(
-                colors: [
-                  Theme.of(context).colorScheme.primary,
-                  Theme.of(context).colorScheme.secondary,
-                  
-                ],
-                 begin: Alignment.bottomLeft,
-               end: Alignment.topRight,
-                )
-            ),
+                gradient: LinearGradient(
+              colors: [
+                Theme.of(context).colorScheme.primary,
+                Theme.of(context).colorScheme.secondary,
+              ],
+              begin: Alignment.bottomLeft,
+              end: Alignment.topRight,
+            )),
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
@@ -52,7 +50,6 @@ class _SplashScreenState extends State<SplashScreen> {
                       ),
                 ),
                 // const SizedBox(height: 20,),
-                
               ],
             )));
   }
