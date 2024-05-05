@@ -22,13 +22,27 @@ class MessageLookup extends MessageLookupByLibrary {
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
+        "age": MessageLookupByLibrary.simpleMessage("Age"),
+        "age_validation":
+            MessageLookupByLibrary.simpleMessage("Please enter your age"),
         "calm": MessageLookupByLibrary.simpleMessage("calm"),
         "confirm": MessageLookupByLibrary.simpleMessage("Confirm"),
+        "email": MessageLookupByLibrary.simpleMessage("Email"),
+        "email_validation":
+            MessageLookupByLibrary.simpleMessage("Please enter your email"),
+        "female": MessageLookupByLibrary.simpleMessage("Female"),
         "follow": MessageLookupByLibrary.simpleMessage("follow up"),
         "hope": MessageLookupByLibrary.simpleMessage("hopeful "),
         "hope_box": MessageLookupByLibrary.simpleMessage("Hope Box"),
         "hopeful": MessageLookupByLibrary.simpleMessage("hopeful"),
+        "male": MessageLookupByLibrary.simpleMessage("Male"),
+        "name": MessageLookupByLibrary.simpleMessage("Name"),
+        "name_validation":
+            MessageLookupByLibrary.simpleMessage("Please enter your name"),
         "new_account": MessageLookupByLibrary.simpleMessage("New account"),
+        "password": MessageLookupByLibrary.simpleMessage("Password"),
+        "password_validation":
+            MessageLookupByLibrary.simpleMessage("Please enter your password"),
         "sign_in": MessageLookupByLibrary.simpleMessage("Sign in")
       };
 }

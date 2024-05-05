@@ -22,13 +22,27 @@ class MessageLookup extends MessageLookupByLibrary {
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
+        "age": MessageLookupByLibrary.simpleMessage("السن"),
+        "age_validation":
+            MessageLookupByLibrary.simpleMessage("من فضلك ادخل عمرك"),
         "calm": MessageLookupByLibrary.simpleMessage("هدوء"),
         "confirm": MessageLookupByLibrary.simpleMessage("تأكيد"),
+        "email": MessageLookupByLibrary.simpleMessage("البريد الاكترونى"),
+        "email_validation": MessageLookupByLibrary.simpleMessage(
+            "من فضلك ادخل البريد الالكترونى"),
+        "female": MessageLookupByLibrary.simpleMessage("أنثى"),
         "follow": MessageLookupByLibrary.simpleMessage("متابعة"),
         "hope": MessageLookupByLibrary.simpleMessage("هدوء و أمل"),
         "hope_box": MessageLookupByLibrary.simpleMessage("صندوق الأمل"),
         "hopeful": MessageLookupByLibrary.simpleMessage("أمل"),
+        "male": MessageLookupByLibrary.simpleMessage("ذكر"),
+        "name": MessageLookupByLibrary.simpleMessage("الأسم"),
+        "name_validation":
+            MessageLookupByLibrary.simpleMessage("من فضلك ادخل أسمك"),
         "new_account": MessageLookupByLibrary.simpleMessage("انشاء حساب"),
+        "password": MessageLookupByLibrary.simpleMessage("كلمة السر"),
+        "password_validation":
+            MessageLookupByLibrary.simpleMessage("من فضلك ادخل كلمة السر"),
         "sign_in": MessageLookupByLibrary.simpleMessage("تسجيل دخول")
       };
 }

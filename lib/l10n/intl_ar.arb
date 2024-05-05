@@ -6,7 +6,17 @@
 "hopeful" :"أمل",
 "calm":"هدوء",
 "follow":"متابعة",
-"confirm" : "تأكيد"
+"confirm" : "تأكيد",
+"email" : "البريد الاكترونى",
+"password" : "كلمة السر",
+"name":"الأسم",
+"age":"السن",
+"email_validation":"من فضلك ادخل البريد الالكترونى",
+"password_validation":"من فضلك ادخل كلمة السر",
+"name_validation":"من فضلك ادخل أسمك",
+"age_validation":"من فضلك ادخل عمرك",
+"male":"ذكر",
+"female":"أنثى"
 
 
 

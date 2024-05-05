@@ -6,7 +6,17 @@
 "hopeful" :"hopeful",
 "calm":"calm",
 "follow":"follow up",
-"confirm" : "Confirm"
+"confirm" : "Confirm",
+"email":"Email",
+"password": "Password",
+"name":"Name",
+"age": "Age",
+"email_validation":"Please enter your email",
+"password_validation":"Please enter your password",
+"name_validation":"Please enter your name",
+"age_validation":"Please enter your age",
+"male":"Male",
+"female":"Female"
 
 
 

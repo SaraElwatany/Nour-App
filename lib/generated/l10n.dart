@@ -129,6 +129,106 @@ class S {
       args: [],
     );
   }
+
+  /// `Email`
+  String get email {
+    return Intl.message(
+      'Email',
+      name: 'email',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Password`
+  String get password {
+    return Intl.message(
+      'Password',
+      name: 'password',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Name`
+  String get name {
+    return Intl.message(
+      'Name',
+      name: 'name',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Age`
+  String get age {
+    return Intl.message(
+      'Age',
+      name: 'age',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Please enter your email`
+  String get email_validation {
+    return Intl.message(
+      'Please enter your email',
+      name: 'email_validation',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Please enter your password`
+  String get password_validation {
+    return Intl.message(
+      'Please enter your password',
+      name: 'password_validation',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Please enter your name`
+  String get name_validation {
+    return Intl.message(
+      'Please enter your name',
+      name: 'name_validation',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Please enter your age`
+  String get age_validation {
+    return Intl.message(
+      'Please enter your age',
+      name: 'age_validation',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Male`
+  String get male {
+    return Intl.message(
+      'Male',
+      name: 'male',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Female`
+  String get female {
+    return Intl.message(
+      'Female',
+      name: 'female',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {
