@@ -193,7 +193,7 @@ class _LoginScreenState extends State<LoginScreen> {
                     child: Container(
                       decoration: BoxDecoration(
                         color: const Color.fromARGB(255, 135, 110, 136),
-                        borderRadius: BorderRadius.circular(15),
+                        borderRadius: BorderRadius.circular(20),
                       ),
                       padding: const EdgeInsets.symmetric(horizontal: 20),
                       child: TextFormField(
@@ -218,7 +218,7 @@ class _LoginScreenState extends State<LoginScreen> {
                     child: Container(
                       decoration: BoxDecoration(
                         color: const Color.fromARGB(255, 135, 110, 136),
-                        borderRadius: BorderRadius.circular(15),
+                        borderRadius: BorderRadius.circular(20),
                       ),
                       padding: const EdgeInsets.symmetric(horizontal: 20),
                       child: TextFormField(
@@ -248,7 +248,7 @@ class _LoginScreenState extends State<LoginScreen> {
                     },
                     style: ElevatedButton.styleFrom(
                       shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(15),
+                        borderRadius: BorderRadius.circular(20),
                       ),
                       fixedSize: const Size(128, 55),
                       backgroundColor: Theme.of(context).colorScheme.surface,

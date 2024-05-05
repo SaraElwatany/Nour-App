@@ -39,7 +39,7 @@ class HopefulAndCalm extends StatelessWidget {
                 child: Container(
                   decoration: BoxDecoration(
                     color: Theme.of(context).colorScheme.surface,
-                    borderRadius: BorderRadius.circular(10),
+                    borderRadius: BorderRadius.circular(25),
                   ),
                   height: 155,
                   width: 139,
@@ -75,7 +75,7 @@ class HopefulAndCalm extends StatelessWidget {
                 child: Container(
                   decoration: BoxDecoration(
                     color: Theme.of(context).colorScheme.surface,
-                    borderRadius: BorderRadius.circular(10),
+                    borderRadius: BorderRadius.circular(25),
                   ),
                   height: 155,
                   width: 139,
@@ -117,7 +117,7 @@ class HopefulAndCalm extends StatelessWidget {
             child: Container(
               decoration: BoxDecoration(
                 color: Theme.of(context).colorScheme.surface,
-                borderRadius: BorderRadius.circular(10),
+                borderRadius: BorderRadius.circular(25),
               ),
               height: 85,
               width: 84,
