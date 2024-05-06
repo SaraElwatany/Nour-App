@@ -22,6 +22,7 @@ class MessageLookup extends MessageLookupByLibrary {
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
+        "aLittleBit": MessageLookupByLibrary.simpleMessage("A little bit"),
         "age": MessageLookupByLibrary.simpleMessage("Age"),
         "age_validation":
             MessageLookupByLibrary.simpleMessage("Please enter your age"),
@@ -30,19 +31,27 @@ class MessageLookup extends MessageLookupByLibrary {
         "email": MessageLookupByLibrary.simpleMessage("Email"),
         "email_validation":
             MessageLookupByLibrary.simpleMessage("Please enter your email"),
+        "extremely": MessageLookupByLibrary.simpleMessage("Extremely "),
         "female": MessageLookupByLibrary.simpleMessage("Female"),
         "follow": MessageLookupByLibrary.simpleMessage("follow up"),
         "hope": MessageLookupByLibrary.simpleMessage("hopeful "),
         "hope_box": MessageLookupByLibrary.simpleMessage("Hope Box"),
         "hopeful": MessageLookupByLibrary.simpleMessage("hopeful"),
         "male": MessageLookupByLibrary.simpleMessage("Male"),
+        "moderately": MessageLookupByLibrary.simpleMessage("Moderately"),
         "name": MessageLookupByLibrary.simpleMessage("Name"),
         "name_validation":
             MessageLookupByLibrary.simpleMessage("Please enter your name"),
         "new_account": MessageLookupByLibrary.simpleMessage("New account"),
+        "next": MessageLookupByLibrary.simpleMessage("Next"),
+        "notatall": MessageLookupByLibrary.simpleMessage("Not at all"),
         "password": MessageLookupByLibrary.simpleMessage("Password"),
         "password_validation":
             MessageLookupByLibrary.simpleMessage("Please enter your password"),
+        "previous": MessageLookupByLibrary.simpleMessage("Previous"),
+        "question1": MessageLookupByLibrary.simpleMessage(
+            "Repeated, disturbing, and unwanted memories of the stressful experience?"),
+        "quitAbit": MessageLookupByLibrary.simpleMessage("Quite a bit"),
         "sign_in": MessageLookupByLibrary.simpleMessage("Sign in")
       };
 }

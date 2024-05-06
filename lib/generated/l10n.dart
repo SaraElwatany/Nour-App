@@ -229,6 +229,86 @@ class S {
       args: [],
     );
   }
+
+  /// `Previous`
+  String get previous {
+    return Intl.message(
+      'Previous',
+      name: 'previous',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Next`
+  String get next {
+    return Intl.message(
+      'Next',
+      name: 'next',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Not at all`
+  String get notatall {
+    return Intl.message(
+      'Not at all',
+      name: 'notatall',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Moderately`
+  String get moderately {
+    return Intl.message(
+      'Moderately',
+      name: 'moderately',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Extremely `
+  String get extremely {
+    return Intl.message(
+      'Extremely ',
+      name: 'extremely',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `A little bit`
+  String get aLittleBit {
+    return Intl.message(
+      'A little bit',
+      name: 'aLittleBit',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Quite a bit`
+  String get quitAbit {
+    return Intl.message(
+      'Quite a bit',
+      name: 'quitAbit',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Repeated, disturbing, and unwanted memories of the stressful experience?`
+  String get question1 {
+    return Intl.message(
+      'Repeated, disturbing, and unwanted memories of the stressful experience?',
+      name: 'question1',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

@@ -16,7 +16,15 @@
 "name_validation":"Please enter your name",
 "age_validation":"Please enter your age",
 "male":"Male",
-"female":"Female"
+"female":"Female",
+"previous" : "Previous",
+"next": "Next",
+"notatall":"Not at all",
+"moderately":"Moderately",
+"extremely":"Extremely ",
+"aLittleBit":"A little bit",
+"quitAbit":"Quite a bit",
+"question1":"Repeated, disturbing, and unwanted memories of the stressful experience?"
 
 
 

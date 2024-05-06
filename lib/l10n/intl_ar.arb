@@ -16,7 +16,15 @@
 "name_validation":"من فضلك ادخل أسمك",
 "age_validation":"من فضلك ادخل عمرك",
 "male":"ذكر",
-"female":"أنثى"
+"female":"أنثى",
+"previous":"السابق",
+"next":"التالى",
+"notatall":"مش بيحصل",
+"moderately":"أحيانا",
+"extremely":"طول الوقت",
+"aLittleBit":"قليل",
+"quitAbit":"كتير",
+"question1":"بيجيلك ذكريات مزعجة ومتكررة عن الحادثة؟"
 
 
 

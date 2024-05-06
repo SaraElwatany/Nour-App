@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:nour_app/generated/l10n.dart';
+import 'package:nour_app/screens/quiz.dart';
 import 'package:nour_app/widgets/localization_icon.dart';
 import 'package:nour_app/screens/hope_box.dart';
 
@@ -111,7 +112,7 @@ class HopefulAndCalm extends StatelessWidget {
             onTap: () {
               Navigator.push(
                 context,
-                MaterialPageRoute(builder: (context) => const HopeBox()),
+                MaterialPageRoute(builder: (context) => const Quiz()),
               );
             },
             child: Container(
