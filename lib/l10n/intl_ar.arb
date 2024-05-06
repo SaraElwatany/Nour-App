@@ -2,6 +2,34 @@
 "hope_box": "صندوق الأمل",
 "image": "صورة",
 "video": "مقطع فيديو",
-"audio": "مقطع موسيقي"
+"audio": "مقطع موسيقي",
+"sign_in" : "تسجيل دخول",
+"new_account" : "انشاء حساب",
+"hope": "هدوء و أمل",
+"hopeful" :"أمل",
+"calm":"هدوء",
+"follow":"متابعة",
+"confirm" : "تأكيد",
+"email" : "البريد الاكترونى",
+"password" : "كلمة السر",
+"name":"الأسم",
+"age":"السن",
+"email_validation":"من فضلك ادخل البريد الالكترونى",
+"password_validation":"من فضلك ادخل كلمة السر",
+"name_validation":"من فضلك ادخل أسمك",
+"age_validation":"من فضلك ادخل عمرك",
+"male":"ذكر",
+"female":"أنثى",
+"previous":"السابق",
+"next":"التالى",
+"notatall":"مش بيحصل",
+"moderately":"أحيانا",
+"extremely":"طول الوقت",
+"aLittleBit":"قليل",
+"quitAbit":"كتير",
+"question1":"بيجيلك ذكريات مزعجة ومتكررة عن الحادثة؟"
+
+
+
 
 }

@@ -89,6 +89,256 @@ class S {
       args: [],
     );
   }
+
+  /// `Sign in`
+  String get sign_in {
+    return Intl.message(
+      'Sign in',
+      name: 'sign_in',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `New account`
+  String get new_account {
+    return Intl.message(
+      'New account',
+      name: 'new_account',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `hopeful `
+  String get hope {
+    return Intl.message(
+      'hopeful ',
+      name: 'hope',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `hopeful`
+  String get hopeful {
+    return Intl.message(
+      'hopeful',
+      name: 'hopeful',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `calm`
+  String get calm {
+    return Intl.message(
+      'calm',
+      name: 'calm',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `follow up`
+  String get follow {
+    return Intl.message(
+      'follow up',
+      name: 'follow',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Confirm`
+  String get confirm {
+    return Intl.message(
+      'Confirm',
+      name: 'confirm',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Email`
+  String get email {
+    return Intl.message(
+      'Email',
+      name: 'email',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Password`
+  String get password {
+    return Intl.message(
+      'Password',
+      name: 'password',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Name`
+  String get name {
+    return Intl.message(
+      'Name',
+      name: 'name',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Age`
+  String get age {
+    return Intl.message(
+      'Age',
+      name: 'age',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Please enter your email`
+  String get email_validation {
+    return Intl.message(
+      'Please enter your email',
+      name: 'email_validation',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Please enter your password`
+  String get password_validation {
+    return Intl.message(
+      'Please enter your password',
+      name: 'password_validation',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Please enter your name`
+  String get name_validation {
+    return Intl.message(
+      'Please enter your name',
+      name: 'name_validation',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Please enter your age`
+  String get age_validation {
+    return Intl.message(
+      'Please enter your age',
+      name: 'age_validation',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Male`
+  String get male {
+    return Intl.message(
+      'Male',
+      name: 'male',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Female`
+  String get female {
+    return Intl.message(
+      'Female',
+      name: 'female',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Previous`
+  String get previous {
+    return Intl.message(
+      'Previous',
+      name: 'previous',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Next`
+  String get next {
+    return Intl.message(
+      'Next',
+      name: 'next',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Not at all`
+  String get notatall {
+    return Intl.message(
+      'Not at all',
+      name: 'notatall',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Moderately`
+  String get moderately {
+    return Intl.message(
+      'Moderately',
+      name: 'moderately',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Extremely `
+  String get extremely {
+    return Intl.message(
+      'Extremely ',
+      name: 'extremely',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `A little bit`
+  String get aLittleBit {
+    return Intl.message(
+      'A little bit',
+      name: 'aLittleBit',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Quite a bit`
+  String get quitAbit {
+    return Intl.message(
+      'Quite a bit',
+      name: 'quitAbit',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Repeated, disturbing, and unwanted memories of the stressful experience?`
+  String get question1 {
+    return Intl.message(
+      'Repeated, disturbing, and unwanted memories of the stressful experience?',
+      name: 'question1',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

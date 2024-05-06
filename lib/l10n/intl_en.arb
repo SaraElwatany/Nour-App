@@ -2,7 +2,32 @@
 "hope_box": "Hope Box",
 "image": "Image",
 "video": "Video",
-"audio": "Audio"
+"audio": "Audio",
+"sign_in" : "Sign in",
+"new_account" : "New account",
+"hope": "hopeful ",
+"hopeful" :"hopeful",
+"calm":"calm",
+"follow":"follow up",
+"confirm" : "Confirm",
+"email":"Email",
+"password": "Password",
+"name":"Name",
+"age": "Age",
+"email_validation":"Please enter your email",
+"password_validation":"Please enter your password",
+"name_validation":"Please enter your name",
+"age_validation":"Please enter your age",
+"male":"Male",
+"female":"Female",
+"previous" : "Previous",
+"next": "Next",
+"notatall":"Not at all",
+"moderately":"Moderately",
+"extremely":"Extremely ",
+"aLittleBit":"A little bit",
+"quitAbit":"Quite a bit",
+"question1":"Repeated, disturbing, and unwanted memories of the stressful experience?"
 
 
 

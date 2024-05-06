@@ -22,9 +22,39 @@ class MessageLookup extends MessageLookupByLibrary {
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
+        "aLittleBit": MessageLookupByLibrary.simpleMessage("قليل"),
+        "age": MessageLookupByLibrary.simpleMessage("السن"),
+        "age_validation":
+            MessageLookupByLibrary.simpleMessage("من فضلك ادخل عمرك"),
         "audio": MessageLookupByLibrary.simpleMessage("مقطع موسيقي"),
+        "calm": MessageLookupByLibrary.simpleMessage("هدوء"),
+        "confirm": MessageLookupByLibrary.simpleMessage("تأكيد"),
+        "email": MessageLookupByLibrary.simpleMessage("البريد الاكترونى"),
+        "email_validation": MessageLookupByLibrary.simpleMessage(
+            "من فضلك ادخل البريد الالكترونى"),
+        "extremely": MessageLookupByLibrary.simpleMessage("طول الوقت"),
+        "female": MessageLookupByLibrary.simpleMessage("أنثى"),
+        "follow": MessageLookupByLibrary.simpleMessage("متابعة"),
+        "hope": MessageLookupByLibrary.simpleMessage("هدوء و أمل"),
         "hope_box": MessageLookupByLibrary.simpleMessage("صندوق الأمل"),
+        "hopeful": MessageLookupByLibrary.simpleMessage("أمل"),
         "image": MessageLookupByLibrary.simpleMessage("صورة"),
+        "male": MessageLookupByLibrary.simpleMessage("ذكر"),
+        "moderately": MessageLookupByLibrary.simpleMessage("أحيانا"),
+        "name": MessageLookupByLibrary.simpleMessage("الأسم"),
+        "name_validation":
+            MessageLookupByLibrary.simpleMessage("من فضلك ادخل أسمك"),
+        "new_account": MessageLookupByLibrary.simpleMessage("انشاء حساب"),
+        "next": MessageLookupByLibrary.simpleMessage("التالى"),
+        "notatall": MessageLookupByLibrary.simpleMessage("مش بيحصل"),
+        "password": MessageLookupByLibrary.simpleMessage("كلمة السر"),
+        "password_validation":
+            MessageLookupByLibrary.simpleMessage("من فضلك ادخل كلمة السر"),
+        "previous": MessageLookupByLibrary.simpleMessage("السابق"),
+        "question1": MessageLookupByLibrary.simpleMessage(
+            "بيجيلك ذكريات مزعجة ومتكررة عن الحادثة؟"),
+        "quitAbit": MessageLookupByLibrary.simpleMessage("كتير"),
+        "sign_in": MessageLookupByLibrary.simpleMessage("تسجيل دخول"),
         "video": MessageLookupByLibrary.simpleMessage("مقطع فيديو")
       };
 }
