@@ -22,6 +22,9 @@ class MessageLookup extends MessageLookupByLibrary {
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
-        "hope_box": MessageLookupByLibrary.simpleMessage("صندوق الأمل")
+        "audio": MessageLookupByLibrary.simpleMessage("مقطع موسيقي"),
+        "hope_box": MessageLookupByLibrary.simpleMessage("صندوق الأمل"),
+        "image": MessageLookupByLibrary.simpleMessage("صورة"),
+        "video": MessageLookupByLibrary.simpleMessage("مقطع فيديو")
       };
 }
