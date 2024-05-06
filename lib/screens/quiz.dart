@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:nour_app/generated/l10n.dart';
+import 'package:nour_app/models/questions.dart';
+import 'package:nour_app/utils/localization_utils.dart';
 import 'package:nour_app/widgets/localization_icon.dart';
+import 'package:nour_app/generated/l10n.dart';
 
 List<String> defaultOptions = [
   "not At All",
@@ -9,13 +11,6 @@ List<String> defaultOptions = [
   "Quite a bit",
   "extremely"
 ];
-
-class Question {
-  final String questionText;
-  final List<String> optionsKeys;
-
-  Question(this.questionText, this.optionsKeys);
-}
 
 class Quiz extends StatefulWidget {
   const Quiz({Key? key}) : super(key: key);
@@ -27,71 +22,65 @@ class Quiz extends StatefulWidget {
 class _QuizState extends State<Quiz> {
   int _currentQuestionIndex = 0;
   late List<List<int>> _selectedLevelsList;
+  List<Question> _questions = [];
 
-  final List<Question> _questions = [
-    Question(
-        "1- Repeated, disturbing, and unwanted memories of the stressful experience?",
-        defaultOptions),
-    Question("Repeated, disturbing dreams of the stressful experience?",
-        defaultOptions),
-    Question(
-        "2- Suddenly feeling or acting as if the stressful experience were actually happening again (as if you were actually back there reliving it)?",
-        defaultOptions),
-    Question(
-        "3- Feeling very upset when something reminded you of the stressful experience?",
-        defaultOptions),
-    Question("Question 5", defaultOptions),
-    Question("Question 6", defaultOptions),
-    Question("Question 7", defaultOptions),
-  ];
+  @override
+  void didChangeDependencies() {
+    super.didChangeDependencies();
+    _initializeQuestions();
+  }
+
+  void _initializeQuestions() {
+    _questions = [
+      Question(S.of(context).question1, defaultOptions),
+      Question(S.of(context).question2, defaultOptions),
+      Question(S.of(context).question3, defaultOptions),
+      Question(S.of(context).question4, defaultOptions),
+      Question(S.of(context).question5, defaultOptions),
+      Question(S.of(context).question6, defaultOptions),
+      Question(S.of(context).question7, defaultOptions),
+      Question(S.of(context).question8, defaultOptions),
+      Question(S.of(context).question9, defaultOptions),
+      Question(S.of(context).question10, defaultOptions),
+      Question(S.of(context).question11, defaultOptions),
+      Question(S.of(context).question12, defaultOptions),
+      Question(S.of(context).question13, defaultOptions),
+      Question(S.of(context).question14, defaultOptions),
+      Question(S.of(context).question15, defaultOptions),
+      Question(S.of(context).question16, defaultOptions),
+      Question(S.of(context).question17, defaultOptions),
+      Question(S.of(context).question18, defaultOptions),
+      Question(S.of(context).question19, defaultOptions),
+      Question(S.of(context).question20, defaultOptions),
+    ];
+  }
 
   @override
   void initState() {
     super.initState();
     _selectedLevelsList = List.generate(
-      _questions.length,
-      (index) => List<int>.filled(_questions[index].optionsKeys.length, -1),
+      20,
+      (index) => List<int>.filled(5, -1),
     );
   }
 
   void _nextQuestion() {
     setState(() {
       int increment = 3;
-      if (_currentQuestionIndex + increment < _questions.length) {
-        _currentQuestionIndex += increment;
-      } else {
-        _currentQuestionIndex =
-            _questions.length - (_questions.length % increment);
-      }
+      _currentQuestionIndex =
+          (_currentQuestionIndex + increment < _questions.length)
+              ? _currentQuestionIndex + increment
+              : _currentQuestionIndex;
     });
   }
 
   void _previousQuestion() {
     setState(() {
       int decrement = 3;
-      if (_currentQuestionIndex >= decrement) {
-        _currentQuestionIndex -= decrement;
-      } else {
-        _currentQuestionIndex = 0;
-      }
+      _currentQuestionIndex = (_currentQuestionIndex >= decrement)
+          ? _currentQuestionIndex - decrement
+          : 0;
     });
-  }
-
-  String _getLocalizedText(BuildContext context, String key) {
-    switch (key) {
-      case "not At All":
-        return S.of(context).notatall;
-      case "moderately":
-        return S.of(context).moderately;
-      case "extremely":
-        return S.of(context).extremely;
-      case "Quite a bit":
-        return S.of(context).quitAbit;
-      case "A little bit":
-        return S.of(context).aLittleBit;
-      default:
-        return " "; // Fallback for unrecognized key
-    }
   }
 
   double _calculateProgress() {
@@ -179,7 +168,7 @@ class _QuizState extends State<Quiz> {
                           children: List.generate(question.optionsKeys.length,
                               (index) {
                             String key = question.optionsKeys[index];
-                            String option = _getLocalizedText(context, key);
+                            String option = getLocalizedText(context, key);
 
                             return Expanded(
                               child: Column(
@@ -207,7 +196,7 @@ class _QuizState extends State<Quiz> {
                                     },
                                   ),
                                   Text(option,
-                                      style: const TextStyle(fontSize: 15)),
+                                      style: const TextStyle(fontSize: 10)),
                                 ],
                               ),
                             );
@@ -229,7 +218,7 @@ class _QuizState extends State<Quiz> {
                       shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(20),
                       ),
-                      fixedSize: const Size(128, 55),
+                      fixedSize: const Size(130, 55),
                     ),
                     child: Text(
                       S.of(context).previous,
@@ -246,7 +235,7 @@ class _QuizState extends State<Quiz> {
                       shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(20),
                       ),
-                      fixedSize: const Size(128, 55),
+                      fixedSize: const Size(130, 55),
                     ),
                     child: Text(
                       S.of(context).next,
