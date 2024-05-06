@@ -1,5 +1,6 @@
 {
 "hope_box": "Hope Box",
+<<<<<<< HEAD
 "sign_in" : "Sign in",
 "new_account" : "New account",
 "hope": "hopeful ",
@@ -25,28 +26,11 @@
 "aLittleBit":"A little bit",
 "quitAbit":"Quite a bit",
 "question1":"Repeated, disturbing, and unwanted memories of the stressful experience?"
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+=======
+"image": "Image",
+"video": "Video",
+"audio": "Audio"
+>>>>>>> e47c731 (Hope Box)
 
 
 

@@ -60,26 +60,43 @@ class S {
     );
   }
 
+<<<<<<< HEAD
   /// `Sign in`
   String get sign_in {
     return Intl.message(
       'Sign in',
       name: 'sign_in',
+=======
+  /// `Image`
+  String get image {
+    return Intl.message(
+      'Image',
+      name: 'image',
+>>>>>>> e47c731 (Hope Box)
       desc: '',
       args: [],
     );
   }
 
+<<<<<<< HEAD
   /// `New account`
   String get new_account {
     return Intl.message(
       'New account',
       name: 'new_account',
+=======
+  /// `Video`
+  String get video {
+    return Intl.message(
+      'Video',
+      name: 'video',
+>>>>>>> e47c731 (Hope Box)
       desc: '',
       args: [],
     );
   }
 
+<<<<<<< HEAD
   /// `hopeful `
   String get hope {
     return Intl.message(
@@ -305,6 +322,13 @@ class S {
     return Intl.message(
       'Repeated, disturbing, and unwanted memories of the stressful experience?',
       name: 'question1',
+=======
+  /// `Audio`
+  String get audio {
+    return Intl.message(
+      'Audio',
+      name: 'audio',
+>>>>>>> e47c731 (Hope Box)
       desc: '',
       args: [],
     );

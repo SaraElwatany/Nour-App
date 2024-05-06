@@ -22,6 +22,7 @@ class MessageLookup extends MessageLookupByLibrary {
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
+<<<<<<< HEAD
         "aLittleBit": MessageLookupByLibrary.simpleMessage("قليل"),
         "age": MessageLookupByLibrary.simpleMessage("السن"),
         "age_validation":
@@ -53,5 +54,11 @@ class MessageLookup extends MessageLookupByLibrary {
             "بيجيلك ذكريات مزعجة ومتكررة عن الحادثة؟"),
         "quitAbit": MessageLookupByLibrary.simpleMessage("كتير"),
         "sign_in": MessageLookupByLibrary.simpleMessage("تسجيل دخول")
+=======
+        "audio": MessageLookupByLibrary.simpleMessage("مقطع موسيقي"),
+        "hope_box": MessageLookupByLibrary.simpleMessage("صندوق الأمل"),
+        "image": MessageLookupByLibrary.simpleMessage("صورة"),
+        "video": MessageLookupByLibrary.simpleMessage("مقطع فيديو")
+>>>>>>> e47c731 (Hope Box)
       };
 }
