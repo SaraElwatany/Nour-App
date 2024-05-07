@@ -52,8 +52,13 @@
 "question17":"17. Being “superalert” or watchful or on guard?",
 "question18":"18. Feeling jumpy or easily startled?",
 "question19":"19. Having difficulty concentrating?",
+<<<<<<< HEAD
 "question20":"20. Trouble falling or staying asleep?"
 >>>>>>> 5356db1 (quiz questions)
+=======
+"question20":"20. Trouble falling or staying asleep?",
+"score":"Trauma Level: {score}"
+>>>>>>> 23f3f34 (Quiz localization and Score calculation)
 
 
 
