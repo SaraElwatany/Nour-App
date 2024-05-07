@@ -1,12 +1,10 @@
 {
+
+
 "hope_box": "Hope Box",
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 "image": "Image",
 "video": "Video",
 "audio": "Audio",
->>>>>>> 98a8e426b68a781ea8afc7755449bddeccc55f87
 "sign_in" : "Sign in",
 "new_account" : "New account",
 "hope": "hopeful ",
@@ -31,17 +29,6 @@
 "extremely":"Extremely ",
 "aLittleBit":"A little bit",
 "quitAbit":"Quite a bit",
-<<<<<<< HEAD
-<<<<<<< HEAD
-"question1":"Repeated, disturbing, and unwanted memories of the stressful experience?"
-=======
-"image": "Image",
-"video": "Video",
-"audio": "Audio"
->>>>>>> e47c731 (Hope Box)
-=======
-=======
->>>>>>> 98a8e426b68a781ea8afc7755449bddeccc55f87
 "question1":"1. Repeated, disturbing, and unwanted memories of the stressful experience?",
 "question2":"2. Repeated, disturbing dreams of the stressful experience?",
 "question3":"3. Suddenly feeling or acting as if the stressful experience were actually happening again (as if you were actually back there reliving it)?",
@@ -61,21 +48,7 @@
 "question17":"17. Being “superalert” or watchful or on guard?",
 "question18":"18. Feeling jumpy or easily startled?",
 "question19":"19. Having difficulty concentrating?",
-<<<<<<< HEAD
-<<<<<<< HEAD
-"question20":"20. Trouble falling or staying asleep?"
->>>>>>> 5356db1 (quiz questions)
-=======
 "question20":"20. Trouble falling or staying asleep?",
 "score":"Trauma Level: {score}"
->>>>>>> 23f3f34 (Quiz localization and Score calculation)
-=======
-"question20":"20. Trouble falling or staying asleep?",
-"score":"Trauma Level: {score}"
->>>>>>> 98a8e426b68a781ea8afc7755449bddeccc55f87
-
-
-
-
 
 }

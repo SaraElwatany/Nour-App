@@ -132,6 +132,8 @@
 // }
 import 'package:flutter/material.dart';
 import 'package:nour_app/generated/l10n.dart';
+import 'package:nour_app/apis/apis.dart';
+import 'package:nour_app/screens/hopeful_and_calm.dart';
 import 'package:nour_app/widgets/localization_icon.dart';
 
 class LoginScreen extends StatefulWidget {
@@ -145,6 +147,48 @@ class _LoginScreenState extends State<LoginScreen> {
   final _emailController = TextEditingController();
   final _passwordController = TextEditingController();
   final _formKey = GlobalKey<FormState>();
+  String email = '';
+  String password = '';
+
+  void _saveItem() async {
+    if (_formKey.currentState!.validate()) {
+      _formKey.currentState!.save();
+
+      // Send data & then wait for the response either to go to main page or try again
+      String response = await sendData(email, password);
+
+      if (response == 'Access Allowed') {
+        Navigator.of(context)
+            .push(MaterialPageRoute(builder: (ctx) => const HopefulAndCalm()));
+      } else if (response == 'Access Denied') {
+        login_warning(context);
+      }
+    } else {
+      showDialog(
+          context: context,
+          builder: (ctx) => AlertDialog(
+                title: const Text('Invalid Input'),
+                content: const Text(
+                  'Please fill in all required fields correctly',
+                ),
+                backgroundColor: Colors.white,
+                actions: [
+                  TextButton(
+                    onPressed: () {
+                      Navigator.pop(ctx);
+                    },
+                    child: Text(
+                      'Okay',
+                      style: TextStyle(
+                        color: Theme.of(context).colorScheme.surface,
+                        fontSize: 15,
+                      ),
+                    ),
+                  ),
+                ],
+              ));
+    }
+  }
 
   @override
   void dispose() {
@@ -206,6 +250,7 @@ class _LoginScreenState extends State<LoginScreen> {
                           if (value == null || value.isEmpty) {
                             return S.of(context).email_validation;
                           }
+                          email = value;
                           return null;
                         },
                       ),
@@ -232,6 +277,7 @@ class _LoginScreenState extends State<LoginScreen> {
                           if (value == null || value.isEmpty) {
                             return S.of(context).password_validation;
                           }
+                        password = value;
                           return null;
                         },
                       ),
@@ -239,13 +285,15 @@ class _LoginScreenState extends State<LoginScreen> {
                   ),
                   const SizedBox(height: 20),
                   ElevatedButton(
-                    onPressed: () {
+                    onPressed: _saveItem,
+                    /*onPressed: () {
                       if (_formKey.currentState!.validate()) {
-                        String email = _emailController.text;
-                        String password = _passwordController.text;
+                        email = _emailController.text;
+                        password = _passwordController.text;
                         // back
+                        _saveItem;
                       }
-                    },
+                    },*/
                     style: ElevatedButton.styleFrom(
                       shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(20),

@@ -28,12 +28,12 @@ class _LoginScreenState extends State<NewAccount> {
   String? _selectedGender;
 
   void _saveItem() async {
+    print('Entered SaveItem Function');
     output = await signUp(username, email, password, age, gender);
 
     if ((_formKey.currentState!.validate()) && (output == 'Sign up Allowed')) {
       _formKey.currentState!.save();
 
-      // printUserInfoList();
       Navigator.of(context)
           .push(MaterialPageRoute(builder: (ctx) => const HopefulAndCalm()));
     } else {
@@ -179,6 +179,17 @@ class _LoginScreenState extends State<NewAccount> {
                           if (value == null || value.isEmpty) {
                             return S.of(context).email_validation;
                           }
+                          if (output == 'Sign up Denied due to email') {
+                            return 'Please enter a valid Email';
+                          }
+                          if (output ==
+                              'Sign up Denied due to password & email') {
+                            return 'Please enter a valid Email';
+                          }
+                          if (output ==
+                              'Sign up Denied due to duplicate email') {
+                            return 'An account with this Email already exist';
+                          }
                           email = value;
                           return null;
                         },
@@ -205,6 +216,15 @@ class _LoginScreenState extends State<NewAccount> {
                         validator: (value) {
                           if (value == null || value.isEmpty) {
                             return S.of(context).password_validation;
+                          }
+
+                          if (output == 'Sign up Denied due to password') {
+                            return 'Please Enter a Valid Password Format';
+                          }
+
+                          if (output ==
+                              'Sign up Denied due to password & email') {
+                            return 'Please Enter a Valid Password Format';
                           }
                           password = value;
                           return null;
@@ -257,13 +277,16 @@ class _LoginScreenState extends State<NewAccount> {
                   ),
                   const SizedBox(height: 20),
                   ElevatedButton(
-                    onPressed: () {
+                    onPressed: _saveItem,
+                    /*onPressed: () {
                       if (_formKey.currentState!.validate()) {
-                        String email = _emailController.text;
-                        String password = _passwordController.text;
+                        email = _emailController.text;
+                        password = _passwordController.text;
                         // Handle form submission
+                        print('First Flag');
+                        _saveItem;
                       }
-                    },
+                    },*/
                     style: ElevatedButton.styleFrom(
                       shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(20),

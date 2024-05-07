@@ -7,11 +7,11 @@ import 'package:http/http.dart' as http;
 // Local Host For Android Emulator => http://10.0.2.2:19999
 // Local Host For Windows => http://127.0.0.1:19999
 // Local Host For Chrome => http://localhost:58931  120.0.6099.111
-// https://nour-app-q862.onrender.com
+// https://nour-app-cllt.onrender.com
 
 // Function that sends the username and password to the flask backend (return type as future object with no value == The function completes without returning any value)
 Future<String> sendData(String email, String password) async {
-  String url = 'https://nour-app-q862.onrender.com/login';
+  String url = 'https://nour-app-cllt.onrender.com/login';
   var request = await http.post(Uri.parse(url), body: {
     'email': email,
     'password': password,
@@ -113,7 +113,7 @@ void login_warning(context) {
 // Function to sign up an account
 Future<String> signUp(String username, String email, String password,
     String age, String gender) async {
-  var url = 'https://nour-app-q862.onrender.com/signup'; //
+  var url = 'https://nour-app-cllt.onrender.com/signup'; //
   print('Before Request');
 
   var request = await http.post(Uri.parse(url), body: {
