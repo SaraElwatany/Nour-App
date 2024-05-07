@@ -1,5 +1,6 @@
 {
 "hope_box": "Hope Box",
+
 "image": "Image",
 "video": "Video",
 "audio": "Audio",
@@ -27,6 +28,8 @@
 "extremely":"Extremely ",
 "aLittleBit":"A little bit",
 "quitAbit":"Quite a bit",
+
+
 "question1":"1. Repeated, disturbing, and unwanted memories of the stressful experience?",
 "question2":"2. Repeated, disturbing dreams of the stressful experience?",
 "question3":"3. Suddenly feeling or acting as if the stressful experience were actually happening again (as if you were actually back there reliving it)?",
@@ -57,7 +60,12 @@
 "cancel": "Cancel",
 "pause": "Pause",
 "resume": "Resume",
-"starttimer": "Start Timer"
+"starttimer": "Start Timer",
+
+
+"score":"Trauma Level: {score}"
+
+
 
 
 
