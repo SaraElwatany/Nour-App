@@ -529,6 +529,16 @@ class S {
       args: [],
     );
   }
+
+  /// `Trauma Level: {score}`
+  String score(Object score) {
+    return Intl.message(
+      'Trauma Level: $score',
+      name: 'score',
+      desc: '',
+      args: [score],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

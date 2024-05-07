@@ -20,6 +20,8 @@ typedef String MessageIfAbsent(String messageStr, List<dynamic> args);
 class MessageLookup extends MessageLookupByLibrary {
   String get localeName => 'en';
 
+  static String m0(score) => "Trauma Level: ${score}";
+
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
         "aLittleBit": MessageLookupByLibrary.simpleMessage("A little bit"),
@@ -92,6 +94,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "question9": MessageLookupByLibrary.simpleMessage(
             "9. Having strong negative beliefs about yourself, other people, or the world (for example, having thoughts such as: I am bad, there is something seriously wrong with me, no one can be trusted, the world is completely dangerous)?"),
         "quitAbit": MessageLookupByLibrary.simpleMessage("Quite a bit"),
+        "score": m0,
         "sign_in": MessageLookupByLibrary.simpleMessage("Sign in"),
         "video": MessageLookupByLibrary.simpleMessage("Video")
       };

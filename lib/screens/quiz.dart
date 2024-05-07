@@ -93,6 +93,9 @@ class _QuizState extends State<Quiz> {
   @override
   Widget build(BuildContext context) {
     double progressValue = _calculateProgress();
+    int traumaLevel = _selectedLevelsList
+        .where((options) => options.any((element) => element != -1))
+        .length;
 
     return Scaffold(
       appBar: const LocalizationIcon(),
@@ -112,11 +115,29 @@ class _QuizState extends State<Quiz> {
         child: Padding(
           padding: const EdgeInsets.symmetric(horizontal: 16.0, vertical: 30.0),
           child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            crossAxisAlignment: CrossAxisAlignment.center,
+            mainAxisAlignment: MainAxisAlignment.start,
+            crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Container(
-                width: 274,
+                width: 216,
+                height: 49,
+                decoration: BoxDecoration(
+                  color: Theme.of(context).colorScheme.surface,
+                  borderRadius: BorderRadius.circular(5),
+                ),
+                child: Center(
+                  child: Text(
+                    S.of(context).score(traumaLevel.toString()),
+                    style: const TextStyle(
+                      color: Colors.white,
+                      fontSize: 16,
+                    ),
+                  ),
+                ),
+              ),
+              const SizedBox(height: 20),
+              Container(
+                width: 470,
                 height: 22,
                 decoration: BoxDecoration(
                   border:
@@ -196,7 +217,7 @@ class _QuizState extends State<Quiz> {
                                     },
                                   ),
                                   Text(option,
-                                      style: const TextStyle(fontSize: 10)),
+                                      style: const TextStyle(fontSize: 15)),
                                 ],
                               ),
                             );
@@ -214,7 +235,7 @@ class _QuizState extends State<Quiz> {
                   ElevatedButton(
                     onPressed: _previousQuestion,
                     style: ElevatedButton.styleFrom(
-                      primary: Theme.of(context).colorScheme.surface,
+                      backgroundColor: Theme.of(context).colorScheme.surface,
                       shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(20),
                       ),
@@ -231,7 +252,7 @@ class _QuizState extends State<Quiz> {
                   ElevatedButton(
                     onPressed: _nextQuestion,
                     style: ElevatedButton.styleFrom(
-                      primary: Theme.of(context).colorScheme.surface,
+                      backgroundColor: Theme.of(context).colorScheme.surface,
                       shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(20),
                       ),
