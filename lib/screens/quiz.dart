@@ -4,6 +4,7 @@ import 'package:nour_app/utils/localization_utils.dart';
 import 'package:nour_app/widgets/localization_icon.dart';
 import 'package:nour_app/generated/l10n.dart';
 import 'package:nour_app/apis/apis.dart';
+import 'package:nour_app/screens/score_screen.dart';
 
 List<String> defaultOptions = [
   "not At All",
@@ -65,30 +66,60 @@ class _QuizState extends State<Quiz> {
     );
   }
 
-  List<String> getSelectedOptionsList() {
-    List<String> selectedOptionsList = [];
-    for (List<int> options in _selectedLevelsList) {
-      List<String> selectedOptions = [];
-      for (int i = 0; i < options.length; i++) {
-        if (options[i] == 1) {
-          selectedOptions.add(defaultOptions[i]);
-        }
+  List<List<String>> getSelectedOptionsList() {
+  List<List<String>> selectedOptionsList = [];
+  for (List<int> options in _selectedLevelsList) {
+    List<String> selectedOptions = [];
+    for (int i = 0; i < options.length; i++) {
+      if (options[i] == 1) {
+        selectedOptions.add(defaultOptions[i]);
       }
-      selectedOptionsList.add(selectedOptions.join(', '));
     }
-    return selectedOptionsList;
+    selectedOptionsList.add(selectedOptions);
+  }
+  return selectedOptionsList;
+}
+
+
+ void _nextQuestion() async {
+  // Check if this is the last set of questions
+  if (_currentQuestionIndex + 3 >= _questions.length) {
+    // Calculate final score
+    List<List<String>> allSelectedOptions = getSelectedOptionsList();
+    int finalScore = allSelectedOptions.fold(0, (total, options) {
+      return total + options.fold(0, (sum, option) => sum + defaultOptions.indexOf(option));
+    });
+
+    // Debug print the final score
+    print("Final Score: $finalScore");
+
+    // Navigate to the score screen
+    Navigator.pushReplacement(
+      context,
+      MaterialPageRoute(builder: (context) => ScoreScreen(score: finalScore)),
+    );
+    return;
   }
 
-  void _nextQuestion() async {
-    String response = await obtainScores(getSelectedOptionsList());
-    setState(() {
-      int increment = 3;
-      _currentQuestionIndex =
-          (_currentQuestionIndex + increment < _questions.length)
-              ? _currentQuestionIndex + increment
-              : _currentQuestionIndex;
-    });
+  // Regular next question block logic
+  List<List<String>> allSelectedOptions = getSelectedOptionsList();
+  int blockScore = 0;
+  for (int i = _currentQuestionIndex; i < _currentQuestionIndex + 3 && i < allSelectedOptions.length; i++) {
+    blockScore += allSelectedOptions[i].fold(0, (sum, option) => sum + defaultOptions.indexOf(option));
   }
+
+  // Debug print the block score
+  print("Block Score for current index $_currentQuestionIndex: $blockScore");
+
+  String result = await obtainScores(blockScore);
+  print("API Result: $result");
+
+  setState(() {
+    _currentQuestionIndex += 3;
+  });
+}
+
+
 
   void _previousQuestion() {
     setState(() {

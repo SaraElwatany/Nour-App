@@ -194,70 +194,90 @@ Future<String> signUp(String username, String email, String password,
   }
 }
 
-Future<String> obtainScores(List<String> selected_options) async {
+// Future<String> obtainScores(List<String> selected_options) async {
+//   String url = 'https://nour-app-cllt.onrender.com/quiz';
+//   List<String> options;
+//   options = selected_options;
+
+//   // Get the scores from the selected options (list of strings/options)
+
+//   int score = 67; // placeholder for the to-be computed score
+//   var request = await http.post(Uri.parse(url), body: {
+//     'score': score,
+//     // 'password': password,
+//   });
+
+//   if (request.statusCode == 200 ||
+//       request.statusCode == 201 ||
+//       request.statusCode == 204) {
+//     print(
+//         'Received a successful response (Status Code: ${request.statusCode})');
+
+//     // Request successful, handle the response (valid http response was received == okay statement for http)
+//     final responseData = jsonDecode(request.body);
+//     final responseMessage = responseData['response'];
+
+//     print('Received response: $responseMessage');
+
+//     // Ensure that a value is always returned
+//     return 'Access Allowed';
+//   } else if (request.statusCode == 400) {
+//     // Bad Request
+//     print(
+//         'Bad Request: The server could not understand the request (Status Code: 400)');
+//     print('Response Body: ${request.body}');
+//     return 'Access Denied';
+//   } else if (request.statusCode == 401) {
+//     // Unauthorized
+//     print(
+//         'Unauthorized: The request requires user authentication (Status Code: 401)');
+//     print('Response Body: ${request.body}');
+//     return 'Access Denied';
+//   } else if (request.statusCode == 403) {
+//     // Forbidden
+//     print(
+//         'Forbidden: The server understood the request but refuses to authorize it (Status Code: 403)');
+//     print('Response Body: ${request.body}');
+//     return 'Access Denied';
+//   } else if (request.statusCode == 404) {
+//     // Not Found
+//     print(
+//         'Not Found: The requested resource could not be found (Status Code: 404)');
+//     print('Response Body: ${request.body}');
+//     return 'Access Denied';
+//   } else if (request.statusCode == 500) {
+//     // Internal Server Error
+//     print(
+//         'Internal Server Error: A generic error occurred on the server (Status Code: 500)');
+//     print('Response Body: ${request.body}');
+//     return 'Access Denied';
+//   } else {
+//     // Request failed, handle the error
+//     print('Loading Quiz Output failed due to failed request');
+//     print('Response Body: ${request.body}');
+//     // Other status codes
+//     print(
+//         'Received an unexpected response with status code: ${request.statusCode}');
+//     return 'Access Denied';
+//   }
+// }
+
+// In apis.dart
+Future<String> obtainScores(int score) async {
   String url = 'https://nour-app-cllt.onrender.com/quiz';
-  List<String> options;
-  options = selected_options;
 
-  // Get the scores from the selected options (list of strings/options)
+  var response = await http.post(
+    Uri.parse(url),
+    headers: {"Content-Type": "application/json"},
+    body: jsonEncode({'score': score}),
+  );
 
-  int score = 67; // placeholder for the to-be computed score
-  var request = await http.post(Uri.parse(url), body: {
-    'score': score,
-    // 'password': password,
-  });
-
-  if (request.statusCode == 200 ||
-      request.statusCode == 201 ||
-      request.statusCode == 204) {
-    print(
-        'Received a successful response (Status Code: ${request.statusCode})');
-
-    // Request successful, handle the response (valid http response was received == okay statement for http)
-    final responseData = jsonDecode(request.body);
-    final responseMessage = responseData['response'];
-
-    print('Received response: $responseMessage');
-
-    // Ensure that a value is always returned
-    return 'Access Allowed';
-  } else if (request.statusCode == 400) {
-    // Bad Request
-    print(
-        'Bad Request: The server could not understand the request (Status Code: 400)');
-    print('Response Body: ${request.body}');
-    return 'Access Denied';
-  } else if (request.statusCode == 401) {
-    // Unauthorized
-    print(
-        'Unauthorized: The request requires user authentication (Status Code: 401)');
-    print('Response Body: ${request.body}');
-    return 'Access Denied';
-  } else if (request.statusCode == 403) {
-    // Forbidden
-    print(
-        'Forbidden: The server understood the request but refuses to authorize it (Status Code: 403)');
-    print('Response Body: ${request.body}');
-    return 'Access Denied';
-  } else if (request.statusCode == 404) {
-    // Not Found
-    print(
-        'Not Found: The requested resource could not be found (Status Code: 404)');
-    print('Response Body: ${request.body}');
-    return 'Access Denied';
-  } else if (request.statusCode == 500) {
-    // Internal Server Error
-    print(
-        'Internal Server Error: A generic error occurred on the server (Status Code: 500)');
-    print('Response Body: ${request.body}');
-    return 'Access Denied';
+  if (response.statusCode == 200) {
+    var data = jsonDecode(response.body);
+    print('Received response: ${data['message']}');
+    return data['message'];
   } else {
-    // Request failed, handle the error
-    print('Loading Quiz Output failed due to failed request');
-    print('Response Body: ${request.body}');
-    // Other status codes
-    print(
-        'Received an unexpected response with status code: ${request.statusCode}');
-    return 'Access Denied';
+    print('Error: ${response.statusCode}, Body: ${response.body}');
+    return 'Error: Status code ${response.statusCode}';
   }
 }
