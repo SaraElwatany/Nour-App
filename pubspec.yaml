@@ -73,13 +73,9 @@ flutter:
   assets:
     - assets/images/Nour_logo.png
     - assets/images/نور_Nour_text.png
-<<<<<<< HEAD
     - assets/images/calm.png
     - assets/images/hopeful.png
     - assets/images/next.png
-=======
- 
->>>>>>> e47c731 (Hope Box)
    
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware
