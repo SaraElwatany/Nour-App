@@ -3,6 +3,7 @@ import 'package:nour_app/models/questions.dart';
 import 'package:nour_app/utils/localization_utils.dart';
 import 'package:nour_app/widgets/localization_icon.dart';
 import 'package:nour_app/generated/l10n.dart';
+import 'package:nour_app/apis/apis.dart';
 
 List<String> defaultOptions = [
   "not At All",
@@ -64,7 +65,23 @@ class _QuizState extends State<Quiz> {
     );
   }
 
+
+  List<String> getSelectedOptionsList() {
+  List<String> selectedOptionsList = [];
+  for (List<int> options in _selectedLevelsList) {
+    List<String> selectedOptions = [];
+    for (int i = 0; i < options.length; i++) {
+      if (options[i] == 1) {
+        selectedOptions.add(defaultOptions[i]);
+      }
+    }
+    selectedOptionsList.add(selectedOptions.join(', '));
+  }
+  return selectedOptionsList;
+}
+
   void _nextQuestion() {
+    String response = obtainScores(List<String> selected_options);
     setState(() {
       int increment = 3;
       _currentQuestionIndex =
@@ -89,6 +106,8 @@ class _QuizState extends State<Quiz> {
         .length;
     return answeredQuestions / _questions.length;
   }
+
+
 
   @override
   Widget build(BuildContext context) {

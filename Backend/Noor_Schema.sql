@@ -55,20 +55,19 @@ COLLATE = utf8mb4_0900_ai_ci;
 
 
 -- -----------------------------------------------------
--- Table `defaultdb`.`medication`
+-- Table `defaultdb`.`assessment`
 -- -----------------------------------------------------
-DROP TABLE IF EXISTS `defaultdb`.`medication` ;
+DROP TABLE IF EXISTS `defaultdb`.`assessment` ;
 
 CREATE TABLE IF NOT EXISTS `defaultdb`.`medication` (
-  `medication_id` INT AUTO_INCREMENT PRIMARY KEY,
-  `fk_medication_user_id` INT NOT NULL,
-  `test_date` DATE NULL DEFAULT NULL,
-  `medication_name` VARCHAR(45) NULL DEFAULT NULL,
-  `medication_category` VARCHAR(45) NULL DEFAULT NULL,
-  `dosage` INT NULL DEFAULT NULL,
-  INDEX `medication_id` (`fk_medication_user_id` ASC) VISIBLE,
-  CONSTRAINT `medication_id`
-    FOREIGN KEY (`fk_medication_user_id`)
+  `id` INT AUTO_INCREMENT PRIMARY KEY,
+  `fk_user_id` INT NOT NULL,
+  `username` VARCHAR(225) NULL DEFAULT NULL,
+  `email` VARCHAR(225) NULL DEFAULT NULL,
+  `score` INT NULL DEFAULT NULL,
+  INDEX `id` (`fk_user_id` ASC) VISIBLE,
+  CONSTRAINT `id`
+    FOREIGN KEY (`fk_user_id`)
     REFERENCES `defaultdb`.`user` (`id`)
     ON DELETE CASCADE
     ON UPDATE RESTRICT)
@@ -104,8 +103,8 @@ COLLATE = utf8mb4_0900_ai_ci;
 INSERT INTO `defaultdb`.`user` 
 (`id`, `username`, `password`, `age`, `gender`, `email`)
 VALUES
-(123, 'admin', 'pbkdf2:sha256:600000$pAsRDiBDmxSHfdEg$92636fe0bd7e56bc65a754affa38f709298a0c754cc7a29436b1caf999fbab71',
- 35, 'M', 'admin@NoorOrganization.com');
+(1, 'admin', 'pbkdf2:sha256:600000$pAsRDiBDmxSHfdEg$92636fe0bd7e56bc65a754affa38f709298a0c754cc7a29436b1caf999fbab71',
+ 35, 'M', 'admin@NourOrganization.com');
 
 
 SET SQL_MODE=@OLD_SQL_MODE;

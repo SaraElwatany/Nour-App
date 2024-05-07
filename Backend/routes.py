@@ -13,6 +13,7 @@ from werkzeug.security import generate_password_hash, check_password_hash
 
 from .base import db
 from .user_class import User
+from .assessment_class import Assessment
 
 # from .functions import load_img, transform, load_model, predict, convert_to_obj
 
@@ -20,6 +21,8 @@ from .user_class import User
 
 main = Blueprint('main', __name__)
 
+
+email = ''
 
 
 
@@ -39,6 +42,9 @@ def intro():
 # Route to get the username and password in the login screen (Done)
 @main.route('/login', methods = ['POST'])
 def login_info():
+
+    global email
+
    # Get the data from the Json dictionary
     email = request.form.get('email')
     password = request.form.get('password')
@@ -87,6 +93,9 @@ def login_info():
 # A route for the sign up screen (Done)
 @main.route('/signup', methods = ['POST'])
 def signup_info():
+
+    global email
+
     regex_1 = r'\b[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Z|a-z]{2,7}\b'
     regex_2 = re.compile('[@_!#$%^&*()<>?/\|}{~:]')
     data = request.form
@@ -181,5 +190,39 @@ def signup_info():
 
 
 
+# A route for the sign up screen (Done)
+@main.route('/quiz', methods = ['POST'])
+def quiz():
 
+    global email
 
+    # score = int(request.form.get('score'))         # Get the Computed Score For each question
+    user = User.query.filter_by(email=email).first()
+    user_id = user.id
+    username = user.username
+
+    print('Quiz Route,' , f'Obtained Score For User: {email}')
+
+    # add new score to the database
+    new_user = Assessment(
+    username = username, 
+    fk_user_id = user_id,
+    email = email,
+    score = 'None', #score
+    )
+    
+    try:
+        db.session.add(new_user)
+        db.session.commit()
+        print('user id: ', user_id) # Get user ID
+        response = {'response': 'Signup successful'}
+    except OperationalError:
+        print('Operational Error Encountered')
+    except Exception as e:
+        db.session.rollback()
+        print(f'Error during obtaining quiz score: {str(e)}')
+        response = {'response': 'Internal Server Error'}
+    return jsonify(response)
+
+    
+    
