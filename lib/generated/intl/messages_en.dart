@@ -29,6 +29,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "age": MessageLookupByLibrary.simpleMessage("Age"),
         "age_validation":
             MessageLookupByLibrary.simpleMessage("Please enter your age"),
+        "audio": MessageLookupByLibrary.simpleMessage("Audio"),
         "calm": MessageLookupByLibrary.simpleMessage("calm"),
         "confirm": MessageLookupByLibrary.simpleMessage("Confirm"),
         "email": MessageLookupByLibrary.simpleMessage("Email"),
@@ -40,6 +41,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "hope": MessageLookupByLibrary.simpleMessage("hopeful "),
         "hope_box": MessageLookupByLibrary.simpleMessage("Hope Box"),
         "hopeful": MessageLookupByLibrary.simpleMessage("hopeful"),
+        "image": MessageLookupByLibrary.simpleMessage("Image"),
         "male": MessageLookupByLibrary.simpleMessage("Male"),
         "moderately": MessageLookupByLibrary.simpleMessage("Moderately"),
         "name": MessageLookupByLibrary.simpleMessage("Name"),
@@ -94,6 +96,7 @@ class MessageLookup extends MessageLookupByLibrary {
             "9. Having strong negative beliefs about yourself, other people, or the world (for example, having thoughts such as: I am bad, there is something seriously wrong with me, no one can be trusted, the world is completely dangerous)?"),
         "quitAbit": MessageLookupByLibrary.simpleMessage("Quite a bit"),
 <<<<<<< HEAD
+<<<<<<< HEAD
         "sign_in": MessageLookupByLibrary.simpleMessage("Sign in")
 =======
         "audio": MessageLookupByLibrary.simpleMessage("Audio"),
@@ -105,5 +108,10 @@ class MessageLookup extends MessageLookupByLibrary {
 >>>>>>> 23f3f34 (Quiz localization and Score calculation)
         "video": MessageLookupByLibrary.simpleMessage("Video")
 >>>>>>> e47c731 (Hope Box)
+=======
+        "score": m0,
+        "sign_in": MessageLookupByLibrary.simpleMessage("Sign in"),
+        "video": MessageLookupByLibrary.simpleMessage("Video")
+>>>>>>> 98a8e426b68a781ea8afc7755449bddeccc55f87
       };
 }

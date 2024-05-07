@@ -61,6 +61,39 @@ class S {
   }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+  /// `Image`
+  String get image {
+    return Intl.message(
+      'Image',
+      name: 'image',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Video`
+  String get video {
+    return Intl.message(
+      'Video',
+      name: 'video',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Audio`
+  String get audio {
+    return Intl.message(
+      'Audio',
+      name: 'audio',
+      desc: '',
+      args: [],
+    );
+  }
+
+>>>>>>> 98a8e426b68a781ea8afc7755449bddeccc55f87
   /// `Sign in`
   String get sign_in {
     return Intl.message(
@@ -444,6 +477,119 @@ class S {
     );
   }
 
+<<<<<<< HEAD
+=======
+  /// `2. Repeated, disturbing dreams of the stressful experience?`
+  String get question2 {
+    return Intl.message(
+      '2. Repeated, disturbing dreams of the stressful experience?',
+      name: 'question2',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `3. Suddenly feeling or acting as if the stressful experience were actually happening again (as if you were actually back there reliving it)?`
+  String get question3 {
+    return Intl.message(
+      '3. Suddenly feeling or acting as if the stressful experience were actually happening again (as if you were actually back there reliving it)?',
+      name: 'question3',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `4. Feeling very upset when something reminded you of the stressful experience?`
+  String get question4 {
+    return Intl.message(
+      '4. Feeling very upset when something reminded you of the stressful experience?',
+      name: 'question4',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `5. Having strong physical reactions when something reminded you of the stressful experience (for example, heart pounding, trouble breathing, sweating)?`
+  String get question5 {
+    return Intl.message(
+      '5. Having strong physical reactions when something reminded you of the stressful experience (for example, heart pounding, trouble breathing, sweating)?',
+      name: 'question5',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `6. Avoiding memories, thoughts, or feelings related to the stressful experience?`
+  String get question6 {
+    return Intl.message(
+      '6. Avoiding memories, thoughts, or feelings related to the stressful experience?',
+      name: 'question6',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `7. Avoiding external reminders of the stressful experience (for example, people, places, conversations, activities, objects, or situations)?`
+  String get question7 {
+    return Intl.message(
+      '7. Avoiding external reminders of the stressful experience (for example, people, places, conversations, activities, objects, or situations)?',
+      name: 'question7',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `8. Trouble remembering important parts of the stressful experience?`
+  String get question8 {
+    return Intl.message(
+      '8. Trouble remembering important parts of the stressful experience?',
+      name: 'question8',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `9. Having strong negative beliefs about yourself, other people, or the world (for example, having thoughts such as: I am bad, there is something seriously wrong with me, no one can be trusted, the world is completely dangerous)?`
+  String get question9 {
+    return Intl.message(
+      '9. Having strong negative beliefs about yourself, other people, or the world (for example, having thoughts such as: I am bad, there is something seriously wrong with me, no one can be trusted, the world is completely dangerous)?',
+      name: 'question9',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `10. Blaming yourself or someone else for the stressful experience or what happened after it?`
+  String get question10 {
+    return Intl.message(
+      '10. Blaming yourself or someone else for the stressful experience or what happened after it?',
+      name: 'question10',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `11. Having strong negative feelings such as fear, horror, anger, guilt, or shame?`
+  String get question11 {
+    return Intl.message(
+      '11. Having strong negative feelings such as fear, horror, anger, guilt, or shame?',
+      name: 'question11',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `12. Loss of interest in activities that you used to enjoy?`
+  String get question12 {
+    return Intl.message(
+      '12. Loss of interest in activities that you used to enjoy?',
+      name: 'question12',
+      desc: '',
+      args: [],
+    );
+  }
+
+>>>>>>> 98a8e426b68a781ea8afc7755449bddeccc55f87
   /// `13. Feeling distant or cut off from other people?`
   String get question13 {
     return Intl.message(

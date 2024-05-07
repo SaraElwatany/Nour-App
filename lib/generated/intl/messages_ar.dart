@@ -29,6 +29,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "age": MessageLookupByLibrary.simpleMessage("السن"),
         "age_validation":
             MessageLookupByLibrary.simpleMessage("من فضلك ادخل عمرك"),
+        "audio": MessageLookupByLibrary.simpleMessage("مقطع موسيقي"),
         "calm": MessageLookupByLibrary.simpleMessage("هدوء"),
         "confirm": MessageLookupByLibrary.simpleMessage("تأكيد"),
         "email": MessageLookupByLibrary.simpleMessage("البريد الاكترونى"),
@@ -40,6 +41,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "hope": MessageLookupByLibrary.simpleMessage("هدوء و أمل"),
         "hope_box": MessageLookupByLibrary.simpleMessage("صندوق الأمل"),
         "hopeful": MessageLookupByLibrary.simpleMessage("أمل"),
+        "image": MessageLookupByLibrary.simpleMessage("صورة"),
         "male": MessageLookupByLibrary.simpleMessage("ذكر"),
         "moderately": MessageLookupByLibrary.simpleMessage("أحيانا"),
         "name": MessageLookupByLibrary.simpleMessage("الأسم"),
@@ -93,6 +95,7 @@ class MessageLookup extends MessageLookupByLibrary {
             "بتحس بمشاعر سلبية تجاه نفسك او الناس التانية او تجاه العالم؟"),
         "quitAbit": MessageLookupByLibrary.simpleMessage("كتير"),
 <<<<<<< HEAD
+<<<<<<< HEAD
         "sign_in": MessageLookupByLibrary.simpleMessage("تسجيل دخول")
 =======
         "audio": MessageLookupByLibrary.simpleMessage("مقطع موسيقي"),
@@ -104,5 +107,10 @@ class MessageLookup extends MessageLookupByLibrary {
 >>>>>>> 23f3f34 (Quiz localization and Score calculation)
         "video": MessageLookupByLibrary.simpleMessage("مقطع فيديو")
 >>>>>>> e47c731 (Hope Box)
+=======
+        "score": m0,
+        "sign_in": MessageLookupByLibrary.simpleMessage("تسجيل دخول"),
+        "video": MessageLookupByLibrary.simpleMessage("مقطع فيديو")
+>>>>>>> 98a8e426b68a781ea8afc7755449bddeccc55f87
       };
 }

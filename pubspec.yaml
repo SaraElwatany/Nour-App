@@ -73,6 +73,7 @@ flutter:
   assets:
     - assets/images/Nour_logo.png
     - assets/images/نور_Nour_text.png
+ 
     - assets/images/calm.png
     - assets/images/hopeful.png
     - assets/images/next.png
