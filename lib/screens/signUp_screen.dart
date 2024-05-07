@@ -2,6 +2,16 @@ import 'package:flutter/material.dart';
 import 'package:nour_app/generated/l10n.dart';
 import 'package:nour_app/widgets/localization_icon.dart';
 
+import 'package:nour_app/screens/hopeful_and_calm.dart';
+import 'package:nour_app/apis/apis.dart';
+
+String username = '';
+String email = '';
+String password = '';
+String gender = '';
+String age = '';
+var output = '';
+
 class NewAccount extends StatefulWidget {
   const NewAccount({Key? key}) : super(key: key);
 
@@ -16,6 +26,42 @@ class _LoginScreenState extends State<NewAccount> {
   final _ageController = TextEditingController();
   final _formKey = GlobalKey<FormState>();
   String? _selectedGender;
+
+  void _saveItem() async {
+    output = await signUp(username, email, password, age, gender);
+
+    if ((_formKey.currentState!.validate()) && (output == 'Sign up Allowed')) {
+      _formKey.currentState!.save();
+
+      // printUserInfoList();
+      Navigator.of(context)
+          .push(MaterialPageRoute(builder: (ctx) => const HopefulAndCalm()));
+    } else {
+      showDialog(
+          context: context,
+          builder: (ctx) => AlertDialog(
+                title: const Text('Invalid Input'),
+                content: const Text(
+                  'Please fill in all required fields correctly',
+                ),
+                backgroundColor: Colors.white,
+                actions: [
+                  TextButton(
+                    onPressed: () {
+                      Navigator.pop(ctx);
+                    },
+                    child: Text(
+                      'Okay',
+                      style: TextStyle(
+                        color: Theme.of(context).colorScheme.surface,
+                        fontSize: 15,
+                      ),
+                    ),
+                  ),
+                ],
+              ));
+    }
+  }
 
   @override
   void dispose() {
@@ -80,6 +126,7 @@ class _LoginScreenState extends State<NewAccount> {
                           if (value == null || value.isEmpty) {
                             return S.of(context).name_validation;
                           }
+                          username = value;
                           return null;
                         },
                       ),
@@ -106,6 +153,7 @@ class _LoginScreenState extends State<NewAccount> {
                           if (value == null || value.isEmpty) {
                             return S.of(context).age_validation;
                           }
+                          age = value;
                           return null;
                         },
                       ),
@@ -131,6 +179,7 @@ class _LoginScreenState extends State<NewAccount> {
                           if (value == null || value.isEmpty) {
                             return S.of(context).email_validation;
                           }
+                          email = value;
                           return null;
                         },
                       ),
@@ -157,6 +206,7 @@ class _LoginScreenState extends State<NewAccount> {
                           if (value == null || value.isEmpty) {
                             return S.of(context).password_validation;
                           }
+                          password = value;
                           return null;
                         },
                       ),
@@ -178,6 +228,7 @@ class _LoginScreenState extends State<NewAccount> {
                         setState(() {
                           _selectedGender = newIndex == 0 ? 'Male' : 'Female';
                         });
+                        gender = _selectedGender.toString();
                       },
                       selectedColor: Colors.white, // Color for selected option
                       color: Colors.white, // Color for unselected options

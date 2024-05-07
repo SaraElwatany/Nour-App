@@ -24,7 +24,6 @@ class MessageLookup extends MessageLookupByLibrary {
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
-<<<<<<< HEAD
         "aLittleBit": MessageLookupByLibrary.simpleMessage("A little bit"),
         "age": MessageLookupByLibrary.simpleMessage("Age"),
         "age_validation":
@@ -95,23 +94,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "question9": MessageLookupByLibrary.simpleMessage(
             "9. Having strong negative beliefs about yourself, other people, or the world (for example, having thoughts such as: I am bad, there is something seriously wrong with me, no one can be trusted, the world is completely dangerous)?"),
         "quitAbit": MessageLookupByLibrary.simpleMessage("Quite a bit"),
-<<<<<<< HEAD
-<<<<<<< HEAD
-        "sign_in": MessageLookupByLibrary.simpleMessage("Sign in")
-=======
-        "audio": MessageLookupByLibrary.simpleMessage("Audio"),
-        "hope_box": MessageLookupByLibrary.simpleMessage("Hope Box"),
-        "image": MessageLookupByLibrary.simpleMessage("Image"),
-=======
-        "score": m0,
-        "sign_in": MessageLookupByLibrary.simpleMessage("Sign in"),
->>>>>>> 23f3f34 (Quiz localization and Score calculation)
-        "video": MessageLookupByLibrary.simpleMessage("Video")
->>>>>>> e47c731 (Hope Box)
-=======
         "score": m0,
         "sign_in": MessageLookupByLibrary.simpleMessage("Sign in"),
         "video": MessageLookupByLibrary.simpleMessage("Video")
->>>>>>> 98a8e426b68a781ea8afc7755449bddeccc55f87
       };
 }

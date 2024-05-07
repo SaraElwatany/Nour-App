@@ -18,7 +18,6 @@ import 'package:video_player/video_player.dart';
 import 'package:video_thumbnail/video_thumbnail.dart';
 import 'package:audioplayers/audioplayers.dart';
 
-
 class HopeBox extends StatefulWidget {
   const HopeBox({Key? key}) : super(key: key);
 
@@ -29,15 +28,14 @@ class HopeBox extends StatefulWidget {
 class _HopeBoxState extends State<HopeBox> {
   String? _videoURL;
   VideoPlayerController? _controller;
-  List<Uint8List> _images = []; 
+  List<Uint8List> _images = [];
   List<String> _videos = [];
   List<String> _audios = [];
   final audioPlayer = AudioPlayer();
   bool isPlaying = false;
   Duration duration = Duration.zero;
   Duration position = Duration.zero;
-List<Uint8List?> _videoThumbnails = [];
-
+  List<Uint8List?> _videoThumbnails = [];
 
   @override
   void dispose() {
@@ -68,43 +66,43 @@ List<Uint8List?> _videoThumbnails = [];
     });
   }
 
-void _pickVideo() async {
-  String? videoPath = await pickVideo();
-  if (videoPath != null) {
-    print("Picked video path: $videoPath");
-    _videos.add(videoPath);
-    _initializeVideoPlayer(videoPath);
+  void _pickVideo() async {
+    String? videoPath = await pickVideo();
+    if (videoPath != null) {
+      print("Picked video path: $videoPath");
+      _videos.add(videoPath);
+      _initializeVideoPlayer(videoPath);
+    }
   }
-}
 
+  void _initializeVideoPlayer(String videoPath) async {
+    try {
+      _controller = VideoPlayerController.file(
+        File(videoPath),
+      );
 
-void _initializeVideoPlayer(String videoPath) async {
-  try {
-    _controller = VideoPlayerController.file(
-      File(videoPath),
-    );
+      // Initialize the controller and load the video
+      await _controller!.initialize();
 
-    // Initialize the controller and load the video
-    await _controller!.initialize();
+      // Generate thumbnail
+      final uint8list = await VideoThumbnail.thumbnailData(
+        video: videoPath,
+        imageFormat: ImageFormat.JPEG,
+        maxWidth: 720,
+        maxHeight: 1280,
+        quality: 25,
+      );
 
-    // Generate thumbnail
-    final uint8list = await VideoThumbnail.thumbnailData(
-      video: videoPath,
-      imageFormat: ImageFormat.JPEG,
-      maxWidth: 720, 
-      maxHeight: 1280,  
-      quality: 25,
-    );
+      print("Thumbnail data: $uint8list");
 
-    print("Thumbnail data: $uint8list");
-
-    setState(() {
-      _videoThumbnails.add(uint8list); 
-    });
-  } catch (e) {
-    print("Error generating thumbnail: $e");
+      setState(() {
+        _videoThumbnails.add(uint8list);
+      });
+    } catch (e) {
+      print("Error generating thumbnail: $e");
+    }
   }
-}
+
   Widget _videoPreviewWidget() {
     if (_controller != null) {
       return AspectRatio(
@@ -119,23 +117,22 @@ void _initializeVideoPlayer(String videoPath) async {
   void _selectImage() async {
     Uint8List img = await pickImage(ImageSource.gallery);
     setState(() {
-      _images.add(img); 
+      _images.add(img);
     });
   }
 
-void _pickAudio() async {
-  try {
-    String? filePath = await pickAudioFile();
-    if (filePath != null) {
-      setState(() {
-        _audios.add(filePath);
-      });
- 
+  void _pickAudio() async {
+    try {
+      String? filePath = await pickAudioFile();
+      if (filePath != null) {
+        setState(() {
+          _audios.add(filePath);
+        });
+      }
+    } catch (e) {
+      print("Error picking audio: $e");
     }
-  } catch (e) {
-    print("Error picking audio: $e");
   }
-}
 
   Future<void> _playAudio(String filePath) async {
     audioPlayer.setReleaseMode(ReleaseMode.loop);
@@ -143,16 +140,15 @@ void _pickAudio() async {
     print('Audio playback started');
   }
 
-
-void _showAudioPlayerDialog(String audioPath) {
-  String fileName = audioPath.split('/').last; // Extracting the file name from the file path
-  showDialog(
-    context: context,
-    builder: (context) => ShowAudio(audioPath: audioPath, fileName: fileName),
-  );
-}
-
-  
+  void _showAudioPlayerDialog(String audioPath) {
+    String fileName = audioPath
+        .split('/')
+        .last; // Extracting the file name from the file path
+    showDialog(
+      context: context,
+      builder: (context) => ShowAudio(audioPath: audioPath, fileName: fileName),
+    );
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -221,11 +217,14 @@ void _showAudioPlayerDialog(String audioPath) {
                         onChanged: (value) {
                           if (value != null) {
                             final itemText = value.text;
-                            if (itemText == S.of(context).image || itemText == 'Image') {
+                            if (itemText == S.of(context).image ||
+                                itemText == 'Image') {
                               _selectImage();
-                            } else if (itemText == S.of(context).video || itemText == 'Video') {
+                            } else if (itemText == S.of(context).video ||
+                                itemText == 'Video') {
                               _pickVideo();
-                            } else if (itemText == S.of(context).audio || itemText == 'Audio') {
+                            } else if (itemText == S.of(context).audio ||
+                                itemText == 'Audio') {
                               _pickAudio();
                             }
                           }
@@ -249,7 +248,7 @@ void _showAudioPlayerDialog(String audioPath) {
                         child: InkWell(
                           onTap: () {
                             // Add action when image is tapped
-                            showImage(context,image);
+                            showImage(context, image);
                           },
                           child: Image.memory(
                             image,
@@ -259,79 +258,85 @@ void _showAudioPlayerDialog(String audioPath) {
                       );
                     }).toList(),
                     ..._videos.asMap().entries.map((entry) {
-                    final int index = entry.key;
-                    final String video = entry.value;
-                    return Container(
-                      width: 250,
-                      height: 250,
-                      child: InkWell(
-                        onTap: () {
-                          // Show the video when tapped
-                          showDialog(
-                            context: context,
-                            builder: (_) => ShowVideo(videoPath: video),
-                          );
-                        },
-                        child: Container(
-                          width: 250,
-                          height: 250,
-                          decoration: BoxDecoration(
-                            border: Border.all(
-                              color: Colors.grey,
-                              width: 1.0,
-                            ),
-                          ),
-                          child: _videoThumbnails.length > index && _videoThumbnails[index] != null
-                              ? Image.memory(
-                                  _videoThumbnails[index]!,
-                                  fit: BoxFit.cover,
-                                )
-                              : const Icon(Icons.video_library, size: 120, color: Colors.grey),
-                        ),
-                      ),
-                    );
-                  }).toList(),
-                                      ..._audios.map((audio) {
-                    String fileName = audio.split('/').last; // Extracting the file name from the file path
-                    return Container(
-                      width: 250,
-                      height: 250,
-                      child: InkWell(
-                        onTap: () {
-                          // Add action when audio is tapped
-                          _showAudioPlayerDialog(audio);
-                        },
-                        child: Container(
-                          decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(16),
-                            border: Border.all(
-                              color: Theme.of(context).colorScheme.surface,
-                              width: 6,
-                            ),
-                          ),
-                          child: Column(
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            children: [
-                              Icon(
-                                Icons.music_note,
-                                size: 120,
-                                color: Theme.of(context).colorScheme.surface,
-                              ), // Placeholder icon for audio
-                              SizedBox(height: 8), // Adding space between icon and file name
-                              Text(
-                                fileName,
-                                style: TextStyle(
-                                  color: Theme.of(context).colorScheme.surface,
-                                  fontSize: 16,
-                                ),
+                      final int index = entry.key;
+                      final String video = entry.value;
+                      return Container(
+                        width: 250,
+                        height: 250,
+                        child: InkWell(
+                          onTap: () {
+                            // Show the video when tapped
+                            showDialog(
+                              context: context,
+                              builder: (_) => ShowVideo(videoPath: video),
+                            );
+                          },
+                          child: Container(
+                            width: 250,
+                            height: 250,
+                            decoration: BoxDecoration(
+                              border: Border.all(
+                                color: Colors.grey,
+                                width: 1.0,
                               ),
-                            ],
+                            ),
+                            child: _videoThumbnails.length > index &&
+                                    _videoThumbnails[index] != null
+                                ? Image.memory(
+                                    _videoThumbnails[index]!,
+                                    fit: BoxFit.cover,
+                                  )
+                                : const Icon(Icons.video_library,
+                                    size: 120, color: Colors.grey),
                           ),
                         ),
-                      ),
-                    );
-                  }).toList(),
-
+                      );
+                    }).toList(),
+                    ..._audios.map((audio) {
+                      String fileName = audio
+                          .split('/')
+                          .last; // Extracting the file name from the file path
+                      return Container(
+                        width: 250,
+                        height: 250,
+                        child: InkWell(
+                          onTap: () {
+                            // Add action when audio is tapped
+                            _showAudioPlayerDialog(audio);
+                          },
+                          child: Container(
+                            decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(16),
+                              border: Border.all(
+                                color: Theme.of(context).colorScheme.surface,
+                                width: 6,
+                              ),
+                            ),
+                            child: Column(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children: [
+                                Icon(
+                                  Icons.music_note,
+                                  size: 120,
+                                  color: Theme.of(context).colorScheme.surface,
+                                ), // Placeholder icon for audio
+                                SizedBox(
+                                    height:
+                                        8), // Adding space between icon and file name
+                                Text(
+                                  fileName,
+                                  style: TextStyle(
+                                    color:
+                                        Theme.of(context).colorScheme.surface,
+                                    fontSize: 16,
+                                  ),
+                                ),
+                              ],
+                            ),
+                          ),
+                        ),
+                      );
+                    }).toList(),
                   ],
                 ),
                 _videoURL != null
@@ -339,7 +344,8 @@ void _showAudioPlayerDialog(String audioPath) {
                         _videoPreviewWidget(),
                         if (_controller != null)
                           Positioned.fill(
-                              child: BasicOverlayWidget(controller: _controller!))
+                              child:
+                                  BasicOverlayWidget(controller: _controller!))
                       ])
                     : Container(),
               ],

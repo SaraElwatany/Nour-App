@@ -24,7 +24,6 @@ class MessageLookup extends MessageLookupByLibrary {
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
-<<<<<<< HEAD
         "aLittleBit": MessageLookupByLibrary.simpleMessage("قليل"),
         "age": MessageLookupByLibrary.simpleMessage("السن"),
         "age_validation":
@@ -94,23 +93,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "question9": MessageLookupByLibrary.simpleMessage(
             "بتحس بمشاعر سلبية تجاه نفسك او الناس التانية او تجاه العالم؟"),
         "quitAbit": MessageLookupByLibrary.simpleMessage("كتير"),
-<<<<<<< HEAD
-<<<<<<< HEAD
-        "sign_in": MessageLookupByLibrary.simpleMessage("تسجيل دخول")
-=======
-        "audio": MessageLookupByLibrary.simpleMessage("مقطع موسيقي"),
-        "hope_box": MessageLookupByLibrary.simpleMessage("صندوق الأمل"),
-        "image": MessageLookupByLibrary.simpleMessage("صورة"),
-=======
-        "score": m0,
-        "sign_in": MessageLookupByLibrary.simpleMessage("تسجيل دخول"),
->>>>>>> 23f3f34 (Quiz localization and Score calculation)
-        "video": MessageLookupByLibrary.simpleMessage("مقطع فيديو")
->>>>>>> e47c731 (Hope Box)
-=======
         "score": m0,
         "sign_in": MessageLookupByLibrary.simpleMessage("تسجيل دخول"),
         "video": MessageLookupByLibrary.simpleMessage("مقطع فيديو")
->>>>>>> 98a8e426b68a781ea8afc7755449bddeccc55f87
       };
 }
