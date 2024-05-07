@@ -649,6 +649,66 @@ class S {
       args: [score],
     );
   }
+
+  /// `skip`
+  String get skip {
+    return Intl.message(
+      'skip',
+      name: 'skip',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Welcome in Nour`
+  String get welcome {
+    return Intl.message(
+      'Welcome in Nour',
+      name: 'welcome',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Retake the quiz`
+  String get retake {
+    return Intl.message(
+      'Retake the quiz',
+      name: 'retake',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Back`
+  String get back {
+    return Intl.message(
+      'Back',
+      name: 'back',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `If the score is over 32: recommend more meditation and seek treatment`
+  String get result1 {
+    return Intl.message(
+      'If the score is over 32: recommend more meditation and seek treatment',
+      name: 'result1',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `If the score is less: recommend keeping the meditation habit, but acknowledging improvement`
+  String get result2 {
+    return Intl.message(
+      'If the score is less: recommend keeping the meditation habit, but acknowledging improvement',
+      name: 'result2',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

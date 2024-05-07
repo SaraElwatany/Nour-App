@@ -39,29 +39,15 @@ class _WelcomeState extends State<Welcome> {
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
-                    ElevatedButton(
-                      onPressed: () {
-                        Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                              builder: (context) => const HopefulAndCalm()),
-                        );
-                      },
-                      style: ElevatedButton.styleFrom(
-                        shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(15)),
-                        fixedSize: const Size(166, 50),
-                        backgroundColor: Theme.of(context).colorScheme.surface,
-                      ),
-                      child: Text(
-                        S.of(context).hope,
-                        style: const TextStyle(
-                          fontSize: 20,
-                          color: Color.fromARGB(255, 255, 251, 251),
-                        ),
+                    Text(
+                      S.of(context).welcome,
+                      style: const TextStyle(
+                        fontSize: 30,
+                        color: Colors.black,
+                        fontWeight: FontWeight.bold,
                       ),
                     ),
-                    const SizedBox(height: 10),
+                    const SizedBox(height: 20),
                     ElevatedButton(
                       onPressed: () {
                         Navigator.push(
@@ -72,8 +58,8 @@ class _WelcomeState extends State<Welcome> {
                       },
                       style: ElevatedButton.styleFrom(
                         shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(15)),
-                        fixedSize: const Size(166, 50),
+                            borderRadius: BorderRadius.circular(20)),
+                        fixedSize: const Size(200, 55),
                         backgroundColor: Theme.of(context).colorScheme.surface,
                       ),
                       child: Text(
@@ -95,12 +81,35 @@ class _WelcomeState extends State<Welcome> {
                       },
                       style: ElevatedButton.styleFrom(
                         shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(15)),
-                        fixedSize: const Size(166, 50),
+                            borderRadius: BorderRadius.circular(20)),
+                        fixedSize: const Size(200, 55),
                         backgroundColor: Theme.of(context).colorScheme.surface,
                       ),
                       child: Text(
                         S.of(context).new_account,
+                        style: const TextStyle(
+                          fontSize: 20,
+                          color: Color.fromARGB(255, 255, 251, 251),
+                        ),
+                      ),
+                    ),
+                    const SizedBox(height: 50),
+                    ElevatedButton(
+                      onPressed: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => const HopefulAndCalm()),
+                        );
+                      },
+                      style: ElevatedButton.styleFrom(
+                        shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(20)),
+                        fixedSize: const Size(128, 55),
+                        backgroundColor: Theme.of(context).colorScheme.surface,
+                      ),
+                      child: Text(
+                        S.of(context).skip,
                         style: const TextStyle(
                           fontSize: 20,
                           color: Color.fromARGB(255, 255, 251, 251),

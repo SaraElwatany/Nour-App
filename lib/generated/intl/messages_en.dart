@@ -29,6 +29,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "age_validation":
             MessageLookupByLibrary.simpleMessage("Please enter your age"),
         "audio": MessageLookupByLibrary.simpleMessage("Audio"),
+        "back": MessageLookupByLibrary.simpleMessage("Back"),
         "calm": MessageLookupByLibrary.simpleMessage("calm"),
         "calmilte": MessageLookupByLibrary.simpleMessage("Meditation & calm"),
         "cancel": MessageLookupByLibrary.simpleMessage("Cancel"),
@@ -104,10 +105,17 @@ class MessageLookup extends MessageLookupByLibrary {
         "question9": MessageLookupByLibrary.simpleMessage(
             "9. Having strong negative beliefs about yourself, other people, or the world (for example, having thoughts such as: I am bad, there is something seriously wrong with me, no one can be trusted, the world is completely dangerous)?"),
         "quitAbit": MessageLookupByLibrary.simpleMessage("Quite a bit"),
+        "result1": MessageLookupByLibrary.simpleMessage(
+            "If the score is over 32: recommend more meditation and seek treatment"),
+        "result2": MessageLookupByLibrary.simpleMessage(
+            "If the score is less: recommend keeping the meditation habit, but acknowledging improvement"),
         "resume": MessageLookupByLibrary.simpleMessage("Resume"),
+        "retake": MessageLookupByLibrary.simpleMessage("Retake the quiz"),
         "score": m0,
         "sign_in": MessageLookupByLibrary.simpleMessage("Sign in"),
+        "skip": MessageLookupByLibrary.simpleMessage("skip"),
         "starttimer": MessageLookupByLibrary.simpleMessage("Start Timer"),
-        "video": MessageLookupByLibrary.simpleMessage("Video")
+        "video": MessageLookupByLibrary.simpleMessage("Video"),
+        "welcome": MessageLookupByLibrary.simpleMessage("Welcome in Nour")
       };
 }

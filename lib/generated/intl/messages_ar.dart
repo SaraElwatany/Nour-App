@@ -29,6 +29,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "age_validation":
             MessageLookupByLibrary.simpleMessage("من فضلك ادخل عمرك"),
         "audio": MessageLookupByLibrary.simpleMessage("مقطع موسيقي"),
+        "back": MessageLookupByLibrary.simpleMessage("العودة"),
         "calm": MessageLookupByLibrary.simpleMessage("هدوء"),
         "calmilte": MessageLookupByLibrary.simpleMessage("تأمل و هدوء"),
         "cancel": MessageLookupByLibrary.simpleMessage("الغاء"),
@@ -53,7 +54,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "name": MessageLookupByLibrary.simpleMessage("الأسم"),
         "name_validation":
             MessageLookupByLibrary.simpleMessage("من فضلك ادخل أسمك"),
-        "new_account": MessageLookupByLibrary.simpleMessage("انشاء حساب"),
+        "new_account": MessageLookupByLibrary.simpleMessage("إنشاء حساب "),
         "next": MessageLookupByLibrary.simpleMessage("التالى"),
         "notatall": MessageLookupByLibrary.simpleMessage("مش بيحصل"),
         "ok": MessageLookupByLibrary.simpleMessage("تم"),
@@ -69,7 +70,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "question11": MessageLookupByLibrary.simpleMessage(
             "بتحس بخوف أو رعب جامد طول الوقت؟"),
         "question12": MessageLookupByLibrary.simpleMessage(
-            "بقيت مش متحمس لأي حاجة زي زمان، حتى الحاجات اللي كنت بحبها؟"),
+            "بقيت مش متحمس لأي حاجة زي زمان، حتى الحاجات اللي كنت بتحبها؟"),
         "question13": MessageLookupByLibrary.simpleMessage(
             "بتحس إنك بعيد عن الناس أو زي ما تقول منفصل عنهم خالص؟"),
         "question14": MessageLookupByLibrary.simpleMessage(
@@ -88,7 +89,7 @@ class MessageLookup extends MessageLookupByLibrary {
             "بيجيلك أحلام متكررة ومزعجة عن التجربة؟"),
         "question20": MessageLookupByLibrary.simpleMessage("بتعاني من الأرق؟"),
         "question3": MessageLookupByLibrary.simpleMessage(
-            "فجأة بتحس اة بتتعامل كأن التجربة دى بتتعاد؟"),
+            "فجأة بتحس او بتتعامل كأن التجربة دى بتتعاد؟"),
         "question4": MessageLookupByLibrary.simpleMessage(
             "بتحس انك متضايق جدا لما حد يفكرك بالتجربة؟"),
         "question5": MessageLookupByLibrary.simpleMessage(
@@ -102,10 +103,17 @@ class MessageLookup extends MessageLookupByLibrary {
         "question9": MessageLookupByLibrary.simpleMessage(
             "بتحس بمشاعر سلبية تجاه نفسك او الناس التانية او تجاه العالم؟"),
         "quitAbit": MessageLookupByLibrary.simpleMessage("كتير"),
+        "result1": MessageLookupByLibrary.simpleMessage(
+            "إذا كانت النتيجة أعلى من 32:  يوصى بالمزيد من التأمل وطلب العلاج."),
+        "result2": MessageLookupByLibrary.simpleMessage(
+            "إذا كانت النتيجة أقل: يوصى بالحفاظ على عادة التأمل، مع الاعتراف بالتحسن."),
         "resume": MessageLookupByLibrary.simpleMessage("متابعة"),
+        "retake": MessageLookupByLibrary.simpleMessage("إعادة الاختبار"),
         "score": m0,
         "sign_in": MessageLookupByLibrary.simpleMessage("تسجيل دخول"),
+        "skip": MessageLookupByLibrary.simpleMessage("تخطي"),
         "starttimer": MessageLookupByLibrary.simpleMessage("بدء الموقت"),
-        "video": MessageLookupByLibrary.simpleMessage("مقطع فيديو")
+        "video": MessageLookupByLibrary.simpleMessage("مقطع فيديو"),
+        "welcome": MessageLookupByLibrary.simpleMessage("أهلًا بيك في نور!")
       };
 }

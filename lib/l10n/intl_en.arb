@@ -60,6 +60,13 @@
 "pause": "Pause",
 "resume": "Resume",
 "starttimer": "Start Timer",
-"score":"Trauma Level: {score}"
+"score":"Trauma Level: {score}",
+"skip":"skip",
+"welcome":"Welcome in Nour",
+"retake":"Retake the quiz",
+"back":"Back",
+"result1":"If the score is over 32: recommend more meditation and seek treatment",
+"result2":"If the score is less: recommend keeping the meditation habit, but acknowledging improvement"
+
 
 }
