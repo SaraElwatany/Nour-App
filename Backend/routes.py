@@ -29,7 +29,7 @@ main = Blueprint('main', __name__)
 def intro():
     # Move to login screen
     response = {'response': 'Log In page'}
-    print('Hello there, I am Noor Your Companion')
+    print('Hello there, I am Nour Your Companion')
     return jsonify(response)
 
 
