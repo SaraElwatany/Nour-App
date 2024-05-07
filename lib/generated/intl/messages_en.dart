@@ -28,18 +28,26 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Please enter your age"),
         "audio": MessageLookupByLibrary.simpleMessage("Audio"),
         "calm": MessageLookupByLibrary.simpleMessage("calm"),
+        "calmilte": MessageLookupByLibrary.simpleMessage("Meditation & calm"),
+        "cancel": MessageLookupByLibrary.simpleMessage("Cancel"),
         "confirm": MessageLookupByLibrary.simpleMessage("Confirm"),
         "email": MessageLookupByLibrary.simpleMessage("Email"),
         "email_validation":
             MessageLookupByLibrary.simpleMessage("Please enter your email"),
+        "entertime":
+            MessageLookupByLibrary.simpleMessage("Enter time in minutes"),
+        "exhale": MessageLookupByLibrary.simpleMessage("Exhale"),
         "extremely": MessageLookupByLibrary.simpleMessage("Extremely "),
         "female": MessageLookupByLibrary.simpleMessage("Female"),
         "follow": MessageLookupByLibrary.simpleMessage("follow up"),
+        "hold": MessageLookupByLibrary.simpleMessage("Hold"),
         "hope": MessageLookupByLibrary.simpleMessage("hopeful "),
         "hope_box": MessageLookupByLibrary.simpleMessage("Hope Box"),
         "hopeful": MessageLookupByLibrary.simpleMessage("hopeful"),
         "image": MessageLookupByLibrary.simpleMessage("Image"),
+        "inhale": MessageLookupByLibrary.simpleMessage("Inhale"),
         "male": MessageLookupByLibrary.simpleMessage("Male"),
+        "mins": MessageLookupByLibrary.simpleMessage("Enter minutes"),
         "moderately": MessageLookupByLibrary.simpleMessage("Moderately"),
         "name": MessageLookupByLibrary.simpleMessage("Name"),
         "name_validation":
@@ -47,9 +55,11 @@ class MessageLookup extends MessageLookupByLibrary {
         "new_account": MessageLookupByLibrary.simpleMessage("New account"),
         "next": MessageLookupByLibrary.simpleMessage("Next"),
         "notatall": MessageLookupByLibrary.simpleMessage("Not at all"),
+        "ok": MessageLookupByLibrary.simpleMessage("Ol"),
         "password": MessageLookupByLibrary.simpleMessage("Password"),
         "password_validation":
             MessageLookupByLibrary.simpleMessage("Please enter your password"),
+        "pause": MessageLookupByLibrary.simpleMessage("Pause"),
         "previous": MessageLookupByLibrary.simpleMessage("Previous"),
         "question1": MessageLookupByLibrary.simpleMessage(
             "1. Repeated, disturbing, and unwanted memories of the stressful experience?"),
@@ -92,7 +102,9 @@ class MessageLookup extends MessageLookupByLibrary {
         "question9": MessageLookupByLibrary.simpleMessage(
             "9. Having strong negative beliefs about yourself, other people, or the world (for example, having thoughts such as: I am bad, there is something seriously wrong with me, no one can be trusted, the world is completely dangerous)?"),
         "quitAbit": MessageLookupByLibrary.simpleMessage("Quite a bit"),
+        "resume": MessageLookupByLibrary.simpleMessage("Resume"),
         "sign_in": MessageLookupByLibrary.simpleMessage("Sign in"),
+        "starttimer": MessageLookupByLibrary.simpleMessage("Start Timer"),
         "video": MessageLookupByLibrary.simpleMessage("Video")
       };
 }

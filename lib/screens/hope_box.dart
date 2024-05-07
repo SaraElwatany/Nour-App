@@ -181,7 +181,7 @@ void _showAudioPlayerDialog(String audioPath) {
                     Text(
                       S.of(context).hope_box,
                       style: const TextStyle(
-                        fontSize: 40,
+                        fontSize: 30,
                         color: Colors.black,
                         fontWeight: FontWeight.bold,
                       ),

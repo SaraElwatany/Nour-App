@@ -529,6 +529,116 @@ class S {
       args: [],
     );
   }
+
+  /// `Meditation & calm`
+  String get calmilte {
+    return Intl.message(
+      'Meditation & calm',
+      name: 'calmilte',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Inhale`
+  String get inhale {
+    return Intl.message(
+      'Inhale',
+      name: 'inhale',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Hold`
+  String get hold {
+    return Intl.message(
+      'Hold',
+      name: 'hold',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Exhale`
+  String get exhale {
+    return Intl.message(
+      'Exhale',
+      name: 'exhale',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Enter time in minutes`
+  String get entertime {
+    return Intl.message(
+      'Enter time in minutes',
+      name: 'entertime',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Enter minutes`
+  String get mins {
+    return Intl.message(
+      'Enter minutes',
+      name: 'mins',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Ol`
+  String get ok {
+    return Intl.message(
+      'Ol',
+      name: 'ok',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Cancel`
+  String get cancel {
+    return Intl.message(
+      'Cancel',
+      name: 'cancel',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Pause`
+  String get pause {
+    return Intl.message(
+      'Pause',
+      name: 'pause',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Resume`
+  String get resume {
+    return Intl.message(
+      'Resume',
+      name: 'resume',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Start Timer`
+  String get starttimer {
+    return Intl.message(
+      'Start Timer',
+      name: 'starttimer',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

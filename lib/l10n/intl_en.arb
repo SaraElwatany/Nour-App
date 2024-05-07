@@ -46,7 +46,18 @@
 "question17":"17. Being “superalert” or watchful or on guard?",
 "question18":"18. Feeling jumpy or easily startled?",
 "question19":"19. Having difficulty concentrating?",
-"question20":"20. Trouble falling or staying asleep?"
+"question20":"20. Trouble falling or staying asleep?",
+"calmilte":"Meditation & calm",
+"inhale": "Inhale",
+"hold": "Hold",
+"exhale":"Exhale",
+"entertime": "Enter time in minutes",
+"mins": "Enter minutes",
+"ok": "Ol",
+"cancel": "Cancel",
+"pause": "Pause",
+"resume": "Resume",
+"starttimer": "Start Timer"
 
 
 
