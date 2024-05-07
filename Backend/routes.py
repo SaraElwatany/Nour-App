@@ -2,7 +2,6 @@ import re
 import random
 import base64
 import numpy as np
-import torch.nn as nn
 from datetime import date
 from datetime import datetime
 from sqlalchemy.exc import IntegrityError
