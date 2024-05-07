@@ -46,7 +46,7 @@ def login_info():
     # Convert email to lowercase
     email = email.lower()
 
-    print('Log In Route,' ,f'email: {email}', f'Password: {password}')
+    print('Log In Route,' , f'email: {email}', f'Password: {password}')
 
     user = User.query.filter_by(email=email).first()
 
