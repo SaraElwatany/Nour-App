@@ -195,14 +195,11 @@ Future<String> signUp(String username, String email, String password,
 }
 
 Future<String> obtainScores(List<String> selected_options) async {
-
   String url = 'https://nour-app-cllt.onrender.com/quiz';
   List<String> options;
   options = selected_options;
 
   // Get the scores from the selected options (list of strings/options)
-
-
 
   int score = 67; // placeholder for the to-be computed score
   var request = await http.post(Uri.parse(url), body: {

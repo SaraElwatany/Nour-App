@@ -65,23 +65,22 @@ class _QuizState extends State<Quiz> {
     );
   }
 
-
   List<String> getSelectedOptionsList() {
-  List<String> selectedOptionsList = [];
-  for (List<int> options in _selectedLevelsList) {
-    List<String> selectedOptions = [];
-    for (int i = 0; i < options.length; i++) {
-      if (options[i] == 1) {
-        selectedOptions.add(defaultOptions[i]);
+    List<String> selectedOptionsList = [];
+    for (List<int> options in _selectedLevelsList) {
+      List<String> selectedOptions = [];
+      for (int i = 0; i < options.length; i++) {
+        if (options[i] == 1) {
+          selectedOptions.add(defaultOptions[i]);
+        }
       }
+      selectedOptionsList.add(selectedOptions.join(', '));
     }
-    selectedOptionsList.add(selectedOptions.join(', '));
+    return selectedOptionsList;
   }
-  return selectedOptionsList;
-}
 
-  void _nextQuestion() {
-    String response = obtainScores(List<String> selected_options);
+  void _nextQuestion() async {
+    String response = await obtainScores(getSelectedOptionsList());
     setState(() {
       int increment = 3;
       _currentQuestionIndex =
@@ -106,8 +105,6 @@ class _QuizState extends State<Quiz> {
         .length;
     return answeredQuestions / _questions.length;
   }
-
-
 
   @override
   Widget build(BuildContext context) {
