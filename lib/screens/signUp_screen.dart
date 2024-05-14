@@ -176,6 +176,7 @@ class _LoginScreenState extends State<NewAccount> {
                           border: InputBorder.none,
                         ),
                         validator: (value) {
+                          email = _emailController.text;
                           if (value == null || value.isEmpty) {
                             return S.of(context).email_validation;
                           }
@@ -190,7 +191,6 @@ class _LoginScreenState extends State<NewAccount> {
                               'Sign up Denied due to duplicate email') {
                             return 'An account with this Email already exist';
                           }
-                          email = value;
                           return null;
                         },
                       ),
@@ -214,6 +214,7 @@ class _LoginScreenState extends State<NewAccount> {
                           border: InputBorder.none,
                         ),
                         validator: (value) {
+                          password = _passwordController.text;
                           if (value == null || value.isEmpty) {
                             return S.of(context).password_validation;
                           }
@@ -226,7 +227,6 @@ class _LoginScreenState extends State<NewAccount> {
                               'Sign up Denied due to password & email') {
                             return 'Please Enter a Valid Password Format';
                           }
-                          password = value;
                           return null;
                         },
                       ),

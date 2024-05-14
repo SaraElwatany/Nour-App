@@ -114,7 +114,12 @@ void login_warning(context) {
 Future<String> signUp(String username, String email, String password,
     String age, String gender) async {
   var url = 'https://nour-app-cllt.onrender.com/signup'; //
+
   print('Before Request');
+  print('Email: ${email}');
+  print('Age: ${age}');
+  print('Gender: ${gender}');
+  print('Password: ${password}');
 
   var request = await http.post(Uri.parse(url), body: {
     'username': username,
