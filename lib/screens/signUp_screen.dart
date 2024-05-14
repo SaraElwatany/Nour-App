@@ -29,6 +29,8 @@ class _LoginScreenState extends State<NewAccount> {
 
   void _saveItem() async {
     print('Entered SaveItem Function');
+    email = _emailController.text;
+    password = _passwordController.text;
     output = await signUp(username, email, password, age, gender);
 
     if ((_formKey.currentState!.validate()) && (output == 'Sign up Allowed')) {
@@ -176,7 +178,6 @@ class _LoginScreenState extends State<NewAccount> {
                           border: InputBorder.none,
                         ),
                         validator: (value) {
-                          email = _emailController.text;
                           if (value == null || value.isEmpty) {
                             return S.of(context).email_validation;
                           }
@@ -191,6 +192,7 @@ class _LoginScreenState extends State<NewAccount> {
                               'Sign up Denied due to duplicate email') {
                             return 'An account with this Email already exist';
                           }
+
                           return null;
                         },
                       ),
@@ -214,7 +216,6 @@ class _LoginScreenState extends State<NewAccount> {
                           border: InputBorder.none,
                         ),
                         validator: (value) {
-                          password = _passwordController.text;
                           if (value == null || value.isEmpty) {
                             return S.of(context).password_validation;
                           }
@@ -227,6 +228,7 @@ class _LoginScreenState extends State<NewAccount> {
                               'Sign up Denied due to password & email') {
                             return 'Please Enter a Valid Password Format';
                           }
+
                           return null;
                         },
                       ),
