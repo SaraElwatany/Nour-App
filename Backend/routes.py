@@ -45,6 +45,7 @@ def login_info():
 
     global email
 
+    response = {}
    # Get the data from the Json dictionary
     email = request.form.get('email')
     password = request.form.get('password')
@@ -96,6 +97,7 @@ def signup_info():
 
     global email
 
+    response = {}
     regex_1 = r'\b[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Z|a-z]{2,7}\b'
     regex_2 = re.compile('[@_!#$%^&*()<>?/\|}{~:]')
     data = request.form
@@ -196,6 +198,7 @@ def quiz():
 
     global email
 
+    response = {}
     # score = int(request.form.get('score'))         # Get the Computed Score For each question
     user = User.query.filter_by(email=email).first()
     user_id = user.id
