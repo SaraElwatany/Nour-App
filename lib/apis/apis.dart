@@ -279,7 +279,7 @@ Future<String> obtainScores(int score) async {
 
   if (request.statusCode == 200) {
     var responseData = jsonDecode(request.body);
-    var responseMessage = responseData['response'];
+    var responseMessage = responseData['message'];
     print('Received response: $responseMessage');
 
     return responseMessage;

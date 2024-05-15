@@ -31,6 +31,8 @@ class _LoginScreenState extends State<NewAccount> {
     print('Entered SaveItem Function');
     email = _emailController.text;
     password = _passwordController.text;
+    username = _nameController.text;
+    age = _ageController.text;
     output = await signUp(username, email, password, age, gender);
 
     if ((_formKey.currentState!.validate()) && (output == 'Sign up Allowed')) {

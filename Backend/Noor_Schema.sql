@@ -59,7 +59,7 @@ COLLATE = utf8mb4_0900_ai_ci;
 -- -----------------------------------------------------
 DROP TABLE IF EXISTS `defaultdb`.`assessment` ;
 
-CREATE TABLE IF NOT EXISTS `defaultdb`.`medication` (
+CREATE TABLE IF NOT EXISTS `defaultdb`.`assessment` (
   `id` INT AUTO_INCREMENT PRIMARY KEY,
   `fk_user_id` INT NOT NULL,
   `username` VARCHAR(225) NULL DEFAULT NULL,
