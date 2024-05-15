@@ -199,22 +199,24 @@ def quiz():
     global email
 
     response = {}
-    # score = int(request.form.get('score'))         # Get the Computed Score For each question
+    score = int(request.form.get('score'))         # Get the Computed Score For each question
     user = User.query.filter_by(email=email).first()
-    user_id = user.id
-    username = user.username
 
     print('Quiz Route,' , f'Obtained Score For User: {email}')
-
-    # add new score to the database
-    new_user = Assessment(
-    username = username, 
-    fk_user_id = user_id,
-    email = email,
-    score = int(request.form.get('score')), #score
-    )
+    print(f'Score: {score}')
     
     try:
+        user_id = user.id
+        username = user.username
+
+        # add new score to the database
+        new_user = Assessment(
+        username = username, 
+        fk_user_id = user_id,
+        email = email,
+        score = int(request.form.get('score')), #score
+        )
+
         db.session.add(new_user)
         db.session.commit()
         print('user id: ', user_id) # Get user ID

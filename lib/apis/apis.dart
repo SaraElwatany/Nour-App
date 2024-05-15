@@ -271,18 +271,20 @@ Future<String> signUp(String username, String email, String password,
 Future<String> obtainScores(int score) async {
   String url = 'https://nour-app-cllt.onrender.com/quiz';
 
-  var response = await http.post(
-    Uri.parse(url),
-    headers: {"Content-Type": "application/json"},
-    body: jsonEncode({'score': score}),
-  );
+  var request = await http.post(Uri.parse(url), body: {
+    'score': score.toString(),
+  });
 
-  if (response.statusCode == 200) {
-    var data = jsonDecode(response.body);
-    print('Received response: ${data['message']}');
-    return data['message'];
+  print("Score: ${score.toString()}");
+
+  if (request.statusCode == 200) {
+    var responseData = jsonDecode(request.body);
+    var responseMessage = responseData['response'];
+    print('Received response: $responseMessage');
+
+    return responseMessage;
   } else {
-    print('Error: ${response.statusCode}, Body: ${response.body}');
-    return 'Error: Status code ${response.statusCode}';
+    print('Error: ${request.statusCode}, Body: ${request.body}');
+    return 'Error: Status code ${request.statusCode}';
   }
 }
