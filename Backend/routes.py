@@ -211,20 +211,20 @@ def quiz():
     username = username, 
     fk_user_id = user_id,
     email = email,
-    score = 'None', #score
+    score = int(request.form.get('score')), #score
     )
     
     try:
         db.session.add(new_user)
         db.session.commit()
         print('user id: ', user_id) # Get user ID
-        response = {'response': 'Signup successful'}
+        response = {'message': 'Signup successful'}
     except OperationalError:
         print('Operational Error Encountered')
     except Exception as e:
         db.session.rollback()
         print(f'Error during obtaining quiz score: {str(e)}')
-        response = {'response': 'Internal Server Error'}
+        response = {'message': 'Internal Server Error'}
     return jsonify(response)
 
     
