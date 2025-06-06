@@ -17,20 +17,16 @@
 
 ```
 .
-├── Backend/
-├── android/
-├── ios/
-├── lib/
-├── Hope Box/
-├── Calm Screen/
-├── Update Quiz/
-├── Sign Up/
-├── assets/
-├── test/
-├── web/
-├── windows/
-├── macos/
-└── linux/
+├── Backend/         # Server-side APIs and business logic
+├── android/         # Android app source code
+├── ios/             # iOS app source code
+├── lib/             # Shared Flutter app code (UI and logic)
+├── assets/          # Images, videos, and other static resources
+├── test/            # Unit and widget tests
+├── web/             # Web app source code
+├── windows/         # Windows desktop app source code
+├── macos/           # macOS desktop app source code
+└── linux/           # Linux desktop app source code
 ```
 
 
