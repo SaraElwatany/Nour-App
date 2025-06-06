@@ -1,4 +1,4 @@
-# Nour-App: Mobile Support for PTSD Patients
+# 🌿Nour-App: Mobile Support for PTSD Patients
 
 **Nour-App** is a mobile application designed to support patients with Post-Traumatic Stress Disorder (PTSD). It offers features to promote mental well-being, including a *Hope Box* for personal positive content, meditation videos, and a quiz to assess patient improvement using a clinically recognized scoring technique.
 
